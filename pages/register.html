@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../assets/estilos/register.css" />
+    <link rel="stylesheet" href="../assets/estilos/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-up">
+        <div class="header-rigth">
+          <h2><a href="../index.html">Tienda Tobier</a></h2>
+          <input type="text" class="input-search" placeholder="" />
+        </div>
+
+        <div class="header-left">
+          <div class="header-links">
+            <a href="#">Ayuda</a>
+            <i class="fa-regular fa-comments"></i>
+          </div>
+          <div class="header-links">
+            <a href="#">Mi carrito</a>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-down">
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">¿Quienes somos?</a></li>
+            <li><a href="#">Ubicacion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="form-container">
+        <h1>Registrate de forma muy facil!</h1>
+        <form class="form-login" id="register-form">
+          <div class="form__field">
+            <input
+              type="text"
+              id="name"
+              placeholder="Nombre"
+              autocomplete="off"
+            />
+            <small></small>
+          </div>
+          <div class="form__field">
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Apellido"
+              autocomplete="off"
+            />
+            <small></small>
+          </div>
+          <div class="form__field">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="off"
+            />
+            <small></small>
+          </div>
+          <div class="form__field">
+            <input
+              type="text"
+              id="user"
+              placeholder="Usuario"
+              autocomplete="off"
+            />
+            <small></small>
+          </div>
+          <div class="form__field">
+            <input type="password" id="password" placeholder="Contraseña" />
+            <small></small>
+          </div>
+          <div class="form__field">
+            <input type="text" id="phone" placeholder="Telefono" />
+            <small></small>
+          </div>
+          <button class="btn-send" id="btn-register">Registrarse</button>
+        </form>
+        <p>
+          ¿ya tienes cuenta?
+          <span><a href="./login.html">Iniciar sesion.</a></span>
+        </p>
+      </div>
+    </section>
+    <script src="../assets/register.js"></script>
+  </body>
+</html>

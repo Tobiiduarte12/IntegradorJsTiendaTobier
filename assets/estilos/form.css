@@ -1,0 +1,25 @@
+/* error / succes */
+.form__field.error input {
+  border: 1px solid red;
+}
+
+.form__field small {
+  color: red;
+  max-width: 350px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5px;
+  display: none;
+}
+
+.form__field.succes input {
+  border: 1px solid green;
+}
+
+#form__error {
+  color: red;
+  font-size: 1rem;
+  margin: 5px 0px;
+  max-width: 350px;
+  text-align: center;
+}

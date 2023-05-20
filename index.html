@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tu Tienda de Ropa</title>
+    <link rel="stylesheet" href="./assets/estilos/style.css" />
+    <!-- ***** Font-Asome ***** -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ***** Font-Asome ***** -->
+  </head>
+  <body>
+    <header>
+      <div class="header-up">
+        <div class="header-rigth">
+          <h2>TIENDA TOBIER</h2>
+          <input type="text" class="input-search" placeholder="" />
+        </div>
+
+        <div class="header-left">
+          <div class="header-links">
+            <a href="#">Ayuda</a>
+            <i class="fa-regular fa-comments"></i>
+          </div>
+          <div class="header-left">
+            <a href="./pages/login.html">Mi cuenta</a>
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <div class="header-links">
+            <a href="#">Mi carrito</a>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-down">
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">¿Quienes somos?</a></li>
+            <li><a href="#">Ubicacion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="hero-cards-info-container">
+        <div class="cards-info">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+          <div class="card-info-title">
+            <span>Realizamos cambios</span>
+            <a href="#">Escribinos al Whatsapp</a>
+          </div>
+        </div>
+        <div class="cards-info">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+          <div class="card-info-title">
+            <span>Realizamos envios a todo el pais</span>
+            <a href="#">De lunes a viernes</a>
+          </div>
+        </div>
+        <div class="cards-info">
+          <i class="fa-solid fa-house-user"></i>
+          <div class="card-info-title">
+            <span>Quedate en la comodidad de tu casa.</span>
+            <a href="#">Nostros te llevamos el pedido</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agrega aquí tus productos destacados -->
+      <h2 class="section-title">Destacados</h2>
+      <div class="products-container">
+        <div class="card-product">
+          <figure class="card-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-product-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="card-product">
+          <figure class="card-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-product-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="card-product">
+          <figure class="card-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-product-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="card-product">
+          <figure class="card-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-product-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-novedades">
+      <h2 class="section-title">Novedades</h2>
+      <div class="card-novedades-container">
+        <div class="card-novedades">
+          <figure class="card-novedades-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-novedades-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Ver mas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-ofert">
+      <div class="ofert-container">
+        <h3>Tienda Tobier</h3>
+        <h2>Recibi todas las ofertas</h2>
+        <p>
+          ¿Quieres recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a
+          disfrutarlas!
+        </p>
+        <form class="form-ofert">
+          <div class="form__field">
+            <input
+              type="email"
+              class="input-email"
+              id="email"
+              placeholder="Email"
+            />
+            <small></small>
+          </div>
+
+          <button class="btn-add-product">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2023
+        <span
+          ><a href="https://github.com/Tobiiduarte12" target="_blank"
+            >Tienda TOBIER.</a
+          ></span
+        >
+        Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
