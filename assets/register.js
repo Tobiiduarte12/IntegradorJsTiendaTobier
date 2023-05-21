@@ -164,7 +164,7 @@ const checkPassword = (input) => {
   if (!isSecurityPass(input)) {
     showError(
       input,
-      "Tu contraseña debe tener al menos un simbolo, un numero y contener minimo 8 caracteres"
+      "Tu contraseña debe tener al menos un simbolo, un numero, una mayuscula y contener minimo 8 caracteres"
     );
     return;
   }

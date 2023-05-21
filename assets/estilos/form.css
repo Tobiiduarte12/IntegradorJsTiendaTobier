@@ -1,4 +1,4 @@
-/* error / succes */
+/* error / success */
 .form__field.error input {
   border: 1px solid red;
 }
@@ -12,7 +12,7 @@
   display: none;
 }
 
-.form__field.succes input {
+.form__field.success input {
   border: 1px solid green;
 }
 

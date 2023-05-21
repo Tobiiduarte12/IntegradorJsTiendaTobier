@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../assets/estilos/form.css" />
   </head>
   <body>
     <header>
@@ -50,16 +51,25 @@
     <section id="hero">
       <div class="form-container">
         <h1>Nos encanta verte de nuevo!</h1>
-        <form class="form-login">
+        <form class="form-login" id="form-login">
           <div class="form__field">
-            <input type="text" placeholder="Usuario" id="user" />
-            <small></small>
+            <input
+              type="text"
+              placeholder="Email"
+              id="user"
+              class="form__input"
+            />
           </div>
           <div class="form__field">
-            <input type="password" id="password" placeholder="Contraseña" />
-            <small></small>
+            <input
+              type="password"
+              id="password"
+              placeholder="Contraseña"
+              class="form__input"
+            />
           </div>
           <button class="btn-send" id="btn-login">Iniciar sesion</button>
+          <small id="form__error"></small>
         </form>
         <p>
           ¿no tienes cuenta?
@@ -67,5 +77,6 @@
         </p>
       </div>
     </section>
+    <script src="../assets/login.js"></script>
   </body>
 </html>
