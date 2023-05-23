@@ -17,10 +17,23 @@
   </head>
   <body>
     <header>
-      <div class="header-up">
+      <div class="header-super-up">
+        <figure>
+          <a
+            href="https://www.growbarato.net/blog/la-mejor-marihuana-del-mundo/"
+            target="_blank"
+            ><i class="fa-solid fa-cannabis"></i
+          ></a>
+        </figure>
+        <div class="header-super-up-left">
+          <a href="">Usuario</a> |
+          <button class="header-btn-help">Ayuda</button>
+        </div>
+      </div>
+      <div class="header-mid header-effect-border" id="header-mid">
         <div class="header-rigth">
           <div class="form-control">
-            <h2>TIENDA TOBIER</h2>
+            <h2><a href="./index.html">TIENDA TOBIER</a></h2>
             <input
               class="input input-alt"
               placeholder="Buscar..."
@@ -32,17 +45,11 @@
         </div>
 
         <div class="header-left">
-          <div class="header-links">
-            <a href="#">Ayuda</a>
-            <i class="fa-regular fa-comments"></i>
-          </div>
           <div class="header-left">
-            <a href="./pages/login.html">Mi cuenta</a>
-            <i class="fa-regular fa-user"></i>
+            <a href="./pages/login.html"><i class="fa-regular fa-user"></i></a>
           </div>
           <div class="header-links">
-            <a href="#">Mi carrito</a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </div>
       </div>
@@ -60,26 +67,26 @@
     </header>
 
     <section id="hero">
-      <div class="hero-cards-info-container">
-        <div class="cards-info">
-          <i class="fa-solid fa-arrow-rotate-left"></i>
-          <div class="card-info-title">
-            <span>Realizamos cambios</span>
-            <a href="#">Escribinos al Whatsapp</a>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <p>3 cuotas sin interés</p>
+            <a href="#">Ver opciones de pago</a>
+          </div>
+          <div class="slide">
+            <p>Entregas a todo el país.</p>
+            <a href="#">Ver información de envíos y entregas</a>
+          </div>
+          <div class="slide">
+            <p>Por fin <span>TiendaTobier.com.ar</span></p>
           </div>
         </div>
-        <div class="cards-info">
-          <i class="fa-solid fa-truck-ramp-box"></i>
-          <div class="card-info-title">
-            <span>Realizamos envios a todo el pais</span>
-            <a href="#">De lunes a viernes</a>
+        <div class="slider-arrows">
+          <div class="slider-arrow slider-arrow-left">
+            <i class="fa-solid fa-circle-arrow-left"></i>
           </div>
-        </div>
-        <div class="cards-info">
-          <i class="fa-solid fa-house-user"></i>
-          <div class="card-info-title">
-            <span>Quedate en la comodidad de tu casa.</span>
-            <a href="#">Nostros te llevamos el pedido</a>
+          <div class="slider-arrow slider-arrow-right">
+            <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
         </div>
       </div>
@@ -186,5 +193,6 @@
         Todos los derechos reservados.
       </p>
     </footer>
+    <script src="./assets/main.js"></script>
   </body>
 </html>

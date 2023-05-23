@@ -11,11 +11,13 @@
 }
 
 body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(62, 62, 62, 1) 0%,
     rgba(54, 53, 105, 1) 54%
-  );
+  ); */
+  /* background-color: #ffff; */
+  background-color: #000;
 }
 
 header {
@@ -25,6 +27,23 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header-super-up {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0px;
+  background-color: #141516;
+}
+
+.header-btn-help {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .input {
@@ -82,12 +101,20 @@ header {
   display: flex;
 }
 
-.header-up {
+.header-mid {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 20px;
   height: 70px;
+  position: fixed;
+  background-color: #080808c0;
+  top: 29px;
+}
+
+.header-effect-border.active {
+  border-top: 1px solid white;
 }
 
 .header-rigth {
@@ -107,6 +134,8 @@ header {
   justify-content: center;
   text-align: center;
   width: 100%;
+  margin-top: 100px;
+  padding: 5px;
 }
 
 .navbar {
@@ -127,6 +156,94 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+/* ******** SLIDER ********* */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  animation: slide-animation 5s;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.slide p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.slide a {
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.slide span {
+  font-size: 1.2rem;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  top: 33%;
+}
+
+.slider-arrow {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  color: #000;
+}
+
+.slider-arrow-left {
+  margin-right: auto;
+}
+
+.slider-arrow-right {
+  margin-left: auto;
+}
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  53% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  86% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
 .hero-cards-info-container {
   margin-top: 20px;
   display: flex;
