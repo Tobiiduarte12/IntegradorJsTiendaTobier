@@ -38,6 +38,7 @@ header {
   position: fixed;
   top: 0px;
   background-color: #141516;
+  z-index: 200;
 }
 
 .header-btn-help {
@@ -111,6 +112,7 @@ header {
   position: fixed;
   background-color: #080808c0;
   top: 29px;
+  z-index: 200;
 }
 
 .header-effect-border.active {
@@ -244,6 +246,60 @@ header {
   }
 }
 
+.filters-container {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.filter span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+.filter span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.filter span:not(hover) {
+  transition: all 1s;
+}
+
+.filter span.active {
+  background-color: #b8c9db54;
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: none;
+}
+
 .hero-cards-info-container {
   margin-top: 20px;
   display: flex;
@@ -287,8 +343,15 @@ header {
 }
 
 .section-title {
-  color: white;
-  font-size: 2rem;
+  color: transparent;
+  background: linear-gradient(
+    0deg,
+    rgba(78, 78, 78, 1) 0%,
+    rgba(164, 164, 175, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 3rem;
   font-weight: 600;
   margin: 20px;
 }
@@ -298,7 +361,8 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  max-width: 1200px;
   gap: 20px;
 }
 
@@ -311,6 +375,7 @@ header {
   height: auto;
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .card-product-info {
@@ -322,25 +387,25 @@ header {
 }
 
 .card-product-info h3 {
-  color: #141516;
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .card-product-info p {
-  color: #141516;
+  color: #b8aaaa;
   font-size: 1rem;
   font-weight: 400;
 }
 
 .card-product-info span {
-  color: #141516;
+  color: #000000;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .card-img-container img {
-  width: auto;
+  width: 200px;
   height: 200px;
 }
 
@@ -356,12 +421,16 @@ header {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  border: none;
+  border: 1px solid white;
 }
 
 .btn-add-product:hover {
   background-color: #fff;
   color: #000;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #section-novedades {
@@ -406,9 +475,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #b8c9db54;
   height: 50vh;
   margin-top: 20px;
+  border-top: 1px solid white;
 }
 
 .ofert-container {

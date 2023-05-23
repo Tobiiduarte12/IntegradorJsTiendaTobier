@@ -91,57 +91,66 @@
         </div>
       </div>
 
-      <!-- Agrega aquí tus productos destacados -->
-      <h2 class="section-title">Destacados</h2>
-      <div class="products-container">
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+      <div class="hero-cards-info-container">
+        <div class="cards-info">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+          <div class="card-info-title">
+            <span>Realizamos cambios</span>
+            <a href="#">Escribinos al Whatsapp</a>
           </div>
         </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+        <div class="cards-info">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+          <div class="card-info-title">
+            <span>Realizamos envios a todo el pais</span>
+            <a href="#">De lunes a viernes</a>
           </div>
         </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+        <div class="cards-info">
+          <i class="fa-solid fa-house-user"></i>
+          <div class="card-info-title">
+            <span>Quedate en la comodidad de tu casa.</span>
+            <a href="#">Nostros te llevamos el pedido</a>
           </div>
         </div>
       </div>
+
+      <!-- Agrega aquí tus productos destacados -->
+      <h2 class="section-title">Destacados</h2>
+      <div class="filters-container">
+        <button class="filter">
+          <span class="category active">Todas</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="remeras">Remeras</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="pantalones">Pantalones</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="bermudas">Bermudas</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="calzados">Zapatillas</span>
+        </button>
+      </div>
+      <div class="products-container">
+        <!-- <div class="card-product">
+          <figure class="card-img-container">
+            <img src="./assets/img/remera1.png" alt="producto" />
+          </figure>
+          <div class="card-product-info">
+            <h3>Remera</h3>
+            <p>Remera de algodon</p>
+            <span>$ 1000</span>
+            <button class="btn-add-product">Agregar al carrito</button>
+          </div>
+        </div> -->
+      </div>
+      <button class="btn-add-product btn-load">Ver mas</button>
     </section>
 
-    <section id="section-novedades">
+    <!-- <section id="section-novedades">
       <h2 class="section-title">Novedades</h2>
       <div class="card-novedades-container">
         <div class="card-novedades">
@@ -156,7 +165,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="section-ofert">
       <div class="ofert-container">
@@ -193,6 +202,7 @@
         Todos los derechos reservados.
       </p>
     </footer>
+    <script src="./assets/data.js"></script>
     <script src="./assets/main.js"></script>
   </body>
 </html>
