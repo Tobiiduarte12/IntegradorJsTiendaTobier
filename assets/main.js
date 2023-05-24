@@ -5,8 +5,54 @@ const productsContainer = document.querySelector(".products-container");
 const showMoreBtn = document.querySelector(".btn-load");
 const categoriesContainer = document.querySelector(".filters-container");
 const categoriesList = document.querySelectorAll(".category");
+const toggle = document.getElementById("toggle");
+const cartButton = document.querySelector("#cart-btn");
+const cart = document.querySelector(".cart");
+const menuToggle = document.querySelector(".navbar");
+const overlay = document.querySelector(".overlay");
+const navbarList = document.querySelector(".navbar-list");
 
-console.log(categoriesList);
+const openMenu = () => {
+  toggle.classList.toggle("active");
+  menuToggle.classList.toggle("open-menu");
+  overlay.classList.toggle("show-overlay");
+  if (menuToggle.classList.contains("open-menu")) {
+    cart.classList.remove("open-cart");
+    overlay.classList.add("show-overlay");
+    return;
+  }
+};
+
+const openCart = () => {
+  cart.classList.toggle("open-cart");
+  overlay.classList.toggle("show-overlay");
+
+  if (cart.classList.contains("open-cart")) {
+    menuToggle.classList.remove("open-menu");
+    overlay.classList.add("show-overlay");
+    return;
+  }
+};
+
+const closeOnScroll = () => {
+  if (
+    !menuToggle.classList.contains("open-menu") &&
+    !cart.classList.contains("open-cart")
+  ) {
+    return;
+  }
+  menuToggle.classList.remove("open-menu");
+  cart.classList.remove("open-cart");
+  overlay.classList.remove("show-overlay");
+};
+
+const closeOnClick = (e) => {
+  if (!e.target.classList.contains("navbar-link")) {
+    return;
+  }
+  menuToggle.classList.remove("open-menu");
+  overlay.classList.remove("show-overlay");
+};
 
 const slideWidth = slider.offsetWidth;
 let currentPosition = 0;
@@ -126,6 +172,10 @@ const init = () => {
   renderProducts(appState.products[appState.currentProductsIndex]);
   showMoreBtn.addEventListener("click", showMoreProducts);
   categoriesContainer.addEventListener("click", applyFilter);
+  toggle.addEventListener("click", openMenu);
+  cartButton.addEventListener("click", openCart);
+  window.addEventListener("scroll", closeOnScroll);
+  navbarList.addEventListener("click", closeOnClick);
 };
 
 init();

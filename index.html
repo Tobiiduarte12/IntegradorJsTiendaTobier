@@ -6,6 +6,7 @@
     <title>Tu Tienda de Ropa</title>
     <link rel="stylesheet" href="./assets/estilos/style.css" />
     <link rel="stylesheet" href="./assets/mediaquerys.css" />
+    <link rel="stylesheet" href="./assets/animaciones.css" />
     <!-- ***** Font-Asome ***** -->
     <link
       rel="stylesheet"
@@ -33,7 +34,7 @@
       </div>
 
       <div class="header-mid header-effect-border" id="header-mid">
-        <div class="header-rigth">
+        <div class="header-left">
           <div class="form-control">
             <h2><a href="./index.html">TIENDA TOBIER</a></h2>
             <input
@@ -46,24 +47,45 @@
           </div>
         </div>
 
-        <div class="header-left">
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="header-rigth">
+          <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
+          <div class="toggle" id="toggle">
+            <div class="toggle__line"></div>
+          </div>
         </div>
       </div>
 
-      <div class="header-down">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">¿Quienes somos?</a></li>
-            <li><a href="#">Ubicacion</a></li>
-          </ul>
-          <div>
-            <i></i>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="#" class="navbar-link">Inicio</a></li>
+          <li><a href="#" class="navbar-link">Productos</a></li>
+          <li><a href="#" class="navbar-link">¿Quienes somos?</a></li>
+          <li><a href="#" class="navbar-link">Ubicacion</a></li>
+        </ul>
+      </nav>
+      <div class="cart">
+        <h2>Tus artículos</h2>
+        <div class="cart-card">
+          <img src="#" alt="" />
+          <div class="item-info">
+            <h3 class="item-tittle">Capibara <span>(40)</span></h3>
+            <p class="item-ofert">$ 1.200</p>
+            <!-- <p class="item-price">Precio normal:<span>$1.100</span></p> -->
           </div>
-        </nav>
+          <div class="item-handler">
+            <span class="quantity-handler down">-</span>
+            <span class="item-quantity">1</span>
+            <span class="quantity-handler up">+</span>
+          </div>
+        </div>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span>$4395</span>
+        </div>
+        <button class="btn-add">comprar</button>
       </div>
+      <div class="overlay"></div>
     </header>
 
     <section id="hero">
@@ -96,21 +118,23 @@
           <i class="fa-solid fa-arrow-rotate-left"></i>
           <div class="card-infoUs-title">
             <span>Realizamos cambios</span>
-            <a href="#">Escribinos al Whatsapp</a>
+            <a href="https://wa.me/3777201788" target="_blank"
+              >Escribinos al Whatsapp<i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
         <div class="cards-infoUs">
           <i class="fa-solid fa-truck-ramp-box"></i>
           <div class="card-infoUs-title">
             <span>Realizamos envios a todo el pais</span>
-            <a href="#">De lunes a viernes</a>
+            <p>De lunes a viernes</p>
           </div>
         </div>
         <div class="cards-infoUs">
           <i class="fa-solid fa-house-user"></i>
           <div class="card-infoUs-title">
             <span>Quedate en la comodidad de tu casa.</span>
-            <a href="#">Nostros te llevamos el pedido</a>
+            <p>Nostros te llevamos el pedido</p>
           </div>
         </div>
       </div>

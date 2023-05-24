@@ -9,8 +9,34 @@
 }
 
 @media (max-width: 600px) {
-  .header-rigth {
-    width: 80%;
+  .toggle {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    width: 300px;
+    right: 0;
+    position: fixed;
+    background-color: #141516;
+    height: calc(100vh - 100px);
+    z-index: 1000;
+    border: 1px solid white;
+    border-radius: 5px 0 0 0;
+    top: 100px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .open-menu {
+    display: flex;
+  }
+
+  #hero {
+    margin-top: 100px;
   }
 
   .hero-cards-infoUs-container {
