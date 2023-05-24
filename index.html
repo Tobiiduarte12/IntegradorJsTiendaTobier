@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tu Tienda de Ropa</title>
     <link rel="stylesheet" href="./assets/estilos/style.css" />
+    <link rel="stylesheet" href="./assets/mediaquerys.css" />
     <!-- ***** Font-Asome ***** -->
     <link
       rel="stylesheet"
@@ -26,10 +27,11 @@
           ></a>
         </figure>
         <div class="header-super-up-left">
-          <a href="">Usuario</a> |
-          <button class="header-btn-help">Ayuda</button>
+          <a href="./pages/login.html">Iniciar sesion</a> |
+          <a href="./pages/register.html">Registrarse</a>
         </div>
       </div>
+
       <div class="header-mid header-effect-border" id="header-mid">
         <div class="header-rigth">
           <div class="form-control">
@@ -45,12 +47,7 @@
         </div>
 
         <div class="header-left">
-          <div class="header-left">
-            <a href="./pages/login.html"><i class="fa-regular fa-user"></i></a>
-          </div>
-          <div class="header-links">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
       </div>
 
@@ -62,6 +59,9 @@
             <li><a href="#">¿Quienes somos?</a></li>
             <li><a href="#">Ubicacion</a></li>
           </ul>
+          <div>
+            <i></i>
+          </div>
         </nav>
       </div>
     </header>
@@ -91,24 +91,24 @@
         </div>
       </div>
 
-      <div class="hero-cards-info-container">
-        <div class="cards-info">
+      <div class="hero-cards-infoUs-container">
+        <div class="cards-infoUs">
           <i class="fa-solid fa-arrow-rotate-left"></i>
-          <div class="card-info-title">
+          <div class="card-infoUs-title">
             <span>Realizamos cambios</span>
             <a href="#">Escribinos al Whatsapp</a>
           </div>
         </div>
-        <div class="cards-info">
+        <div class="cards-infoUs">
           <i class="fa-solid fa-truck-ramp-box"></i>
-          <div class="card-info-title">
+          <div class="card-infoUs-title">
             <span>Realizamos envios a todo el pais</span>
             <a href="#">De lunes a viernes</a>
           </div>
         </div>
-        <div class="cards-info">
+        <div class="cards-infoUs">
           <i class="fa-solid fa-house-user"></i>
-          <div class="card-info-title">
+          <div class="card-infoUs-title">
             <span>Quedate en la comodidad de tu casa.</span>
             <a href="#">Nostros te llevamos el pedido</a>
           </div>
@@ -134,38 +134,9 @@
           <span class="category" data-category="calzados">Zapatillas</span>
         </button>
       </div>
-      <div class="products-container">
-        <!-- <div class="card-product">
-          <figure class="card-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div> -->
-      </div>
+      <div class="products-container"></div>
       <button class="btn-add-product btn-load">Ver mas</button>
     </section>
-
-    <!-- <section id="section-novedades">
-      <h2 class="section-title">Novedades</h2>
-      <div class="card-novedades-container">
-        <div class="card-novedades">
-          <figure class="card-novedades-img-container">
-            <img src="./assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-novedades-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Ver mas</button>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section id="section-ofert">
       <div class="ofert-container">
