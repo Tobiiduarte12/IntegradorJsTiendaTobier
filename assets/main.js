@@ -5,15 +5,16 @@ const productsContainer = document.querySelector(".products-container");
 const showMoreBtn = document.querySelector(".btn-load");
 const categoriesContainer = document.querySelector(".filters-container");
 const categoriesList = document.querySelectorAll(".category");
-const toggle = document.getElementById("toggle");
+const menuButton = document.querySelector("#menu-toggle");
 const cartButton = document.querySelector("#cart-btn");
 const cart = document.querySelector(".cart");
 const menuToggle = document.querySelector(".navbar");
 const overlay = document.querySelector(".overlay");
 const navbarList = document.querySelector(".navbar-list");
 
+console.log(menuButton);
+
 const openMenu = () => {
-  toggle.classList.toggle("active");
   menuToggle.classList.toggle("open-menu");
   overlay.classList.toggle("show-overlay");
   if (menuToggle.classList.contains("open-menu")) {
@@ -52,6 +53,20 @@ const closeOnClick = (e) => {
   }
   menuToggle.classList.remove("open-menu");
   overlay.classList.remove("show-overlay");
+};
+
+const onOverlayClose = () => {
+  if (menuToggle.classList.contains("open-menu")) {
+    menuToggle.classList.remove("open-menu");
+    overlay.classList.remove("show-overlay");
+    return;
+  }
+
+  if (cart.classList.contains("open-cart")) {
+    cart.classList.remove("open-cart");
+    overlay.classList.remove("show-overlay");
+    return;
+  }
 };
 
 const slideWidth = slider.offsetWidth;
@@ -172,10 +187,11 @@ const init = () => {
   renderProducts(appState.products[appState.currentProductsIndex]);
   showMoreBtn.addEventListener("click", showMoreProducts);
   categoriesContainer.addEventListener("click", applyFilter);
-  toggle.addEventListener("click", openMenu);
+  menuButton.addEventListener("click", openMenu);
   cartButton.addEventListener("click", openCart);
   window.addEventListener("scroll", closeOnScroll);
   navbarList.addEventListener("click", closeOnClick);
+  overlay.addEventListener("click", onOverlayClose);
 };
 
 init();

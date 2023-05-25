@@ -6,11 +6,11 @@
     width: 100%;
     padding: 20px;
   }
-}
-
-@media (max-width: 600px) {
-  .toggle {
+  .menu-container {
     display: flex;
+  }
+  .menu-container i {
+    font-size: 2rem;
   }
 
   .navbar {
@@ -38,7 +38,9 @@
   #hero {
     margin-top: 100px;
   }
+}
 
+@media (max-width: 600px) {
   .hero-cards-infoUs-container {
     flex-direction: column;
     height: auto;

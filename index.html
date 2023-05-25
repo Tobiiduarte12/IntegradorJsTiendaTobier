@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tu Tienda de Ropa</title>
     <link rel="stylesheet" href="./assets/estilos/style.css" />
-    <link rel="stylesheet" href="./assets/mediaquerys.css" />
-    <link rel="stylesheet" href="./assets/animaciones.css" />
+    <link rel="stylesheet" href="./assets/estilos/mediaquerys.css" />
+    <link rel="stylesheet" href="./assets/estilos/animaciones.css" />
     <!-- ***** Font-Asome ***** -->
     <link
       rel="stylesheet"
@@ -48,18 +48,25 @@
         </div>
 
         <div class="header-rigth">
-          <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
-          <div class="toggle" id="toggle">
-            <div class="toggle__line"></div>
+          <div class="cart-container" id="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="menu-container" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>
 
       <nav class="navbar">
         <ul class="navbar-list">
-          <li><a href="#" class="navbar-link">Inicio</a></li>
-          <li><a href="#" class="navbar-link">Productos</a></li>
-          <li><a href="#" class="navbar-link">¿Quienes somos?</a></li>
+          <li><a href="#hero" class="navbar-link">Inicio</a></li>
+          <li><a href="#section-products" class="navbar-link">Productos</a></li>
+          <li>
+            <a href="#section-ofert" class="navbar-link">¿Quienes somos?</a>
+          </li>
+          <li>
+            <a href="#section-ofert" class="navbar-link">Contacto</a>
+          </li>
           <li><a href="#" class="navbar-link">Ubicacion</a></li>
         </ul>
       </nav>
@@ -138,8 +145,9 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Agrega aquí tus productos destacados -->
+    <section id="section-products">
       <h2 class="section-title">Destacados</h2>
       <div class="filters-container">
         <button class="filter">
@@ -161,6 +169,7 @@
       <div class="products-container"></div>
       <button class="btn-add-product btn-load">Ver mas</button>
     </section>
+    <!-- Agrega aquí tus productos destacados -->
 
     <section id="section-ofert">
       <div class="ofert-container">
