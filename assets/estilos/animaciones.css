@@ -12,11 +12,94 @@ html {
   z-index: 10;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(5px);
   display: none;
 }
 
 .show-overlay {
   display: block;
+}
+
+.navbar-list li {
+  position: relative;
+  padding: 0;
+}
+
+.navbar-list li a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6464 0%, #ffbf59 50%, #47c9ff 100%);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.navbar li a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.cart-container i:hover {
+  color: greenyellow;
+  transition: all 0.2s ease-in;
+}
+
+/* ******* ANIMACIONES ****** */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-open {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-close {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cards-infoUs:nth-child(1) {
+  opacity: 0;
+  animation: fade 0.1s ease-in forwards, slide-up 0.5s ease-in-out;
+  animation-delay: 0.3s;
+}
+.cards-infoUs:nth-child(2) {
+  opacity: 0;
+  animation: fade 0.1s ease-in forwards, slide-up 0.5s ease-in-out;
+  animation-delay: 0.6s;
+}
+.cards-infoUs:nth-child(3) {
+  opacity: 0;
+  animation: fade 0.1s ease-in forwards, slide-up 0.5s ease-in-out;
+  animation-delay: 0.9s;
 }

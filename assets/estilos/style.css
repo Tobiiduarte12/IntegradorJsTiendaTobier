@@ -11,13 +11,6 @@
 }
 
 body {
-  /* background: linear-gradient(
-    0deg,
-    rgba(62, 62, 62, 1) 0%,
-    rgba(54, 53, 105, 1) 54%
-  ); */
-  /* background-color: #ffff; */
-  /* background-color: #000; */
   background-image: url("../img/fondo4.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -42,12 +35,6 @@ header {
   top: 0px;
   background-color: #141516;
   z-index: 200;
-}
-
-.header-btn-help {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 .input {
@@ -137,17 +124,13 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
-.cart-container i:hover {
-  color: greenyellow;
-}
-
 .navbar {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
 
-.navbar ul {
+.navbar-list {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -176,6 +159,7 @@ header {
   width: 300px;
   border: 1px solid white;
   border-radius: 5px 0 0 0;
+  animation: slide-open 0.5s ease-in;
   display: none;
 }
 
@@ -286,10 +270,9 @@ header {
 .hero-cards-infoUs-container {
   display: flex;
   width: 95%;
-  background-color: #b8c9db;
   height: 200px;
-  border-radius: 10px;
   padding: 0px 20px;
+  gap: 2px;
 }
 
 .cards-infoUs {
@@ -298,6 +281,8 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: #b8c9db;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .card-infoUs-title {

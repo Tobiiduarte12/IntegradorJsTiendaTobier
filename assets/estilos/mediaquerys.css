@@ -24,6 +24,7 @@
     border: 1px solid white;
     border-radius: 5px 0 0 0;
     top: 100px;
+    animation: slide-open 0.5s ease-in forwards;
   }
 
   .navbar ul {
