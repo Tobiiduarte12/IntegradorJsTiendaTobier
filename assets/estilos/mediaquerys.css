@@ -6,15 +6,17 @@
     width: 100%;
     padding: 20px;
   }
+
   .menu-container {
     display: flex;
   }
+
   .menu-container i {
     font-size: 2rem;
   }
 
   .navbar {
-    display: none;
+    display: flex;
     width: 300px;
     right: 0;
     position: fixed;
@@ -24,7 +26,8 @@
     border: 1px solid white;
     border-radius: 5px 0 0 0;
     top: 100px;
-    animation: slide-open 0.5s ease-in forwards;
+    transform: translateX(200%);
+    transition: all 0.5s ease-in-out;
   }
 
   .navbar ul {
@@ -33,7 +36,8 @@
   }
 
   .open-menu {
-    display: flex;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
   }
 
   #hero {
