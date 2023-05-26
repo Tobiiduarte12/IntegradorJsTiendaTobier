@@ -35,6 +35,7 @@ header {
   top: 0px;
   background-color: #141516;
   z-index: 200;
+  transition: all 0.2s ease-in;
 }
 
 .input {
@@ -110,11 +111,14 @@ header {
 .header-left {
   display: flex;
   align-items: center;
-  width: 60%;
+  justify-content: space-between;
+  width: 80%;
+  gap: 15px;
 }
 
 .header-rigth {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 20px;
 }
@@ -122,6 +126,21 @@ header {
 .header-rigth i {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.header-rigth i:nth-child(2):hover {
+  color: yellowgreen;
+}
+
+.header-rigth i:nth-child(1) {
+  display: none;
+}
+
+.title-responsive,
+.nav__up,
+.nav__down,
+.navbar-list li i {
+  display: none;
 }
 
 .navbar {
@@ -132,12 +151,9 @@ header {
 
 .navbar-list {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  width: 100%;
   margin-top: 100px;
   padding: 5px;
+  gap: 40px;
 }
 
 .menu-container {
@@ -227,6 +243,9 @@ header {
   justify-content: space-between;
   z-index: 1;
   top: 33%;
+  opacity: 0;
+  animation: fade 0.5s ease-in forwards;
+  animation-delay: 5s;
 }
 
 .slider-arrow {

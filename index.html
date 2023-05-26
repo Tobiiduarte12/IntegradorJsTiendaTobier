@@ -35,6 +35,10 @@
 
       <div class="header-mid header-effect-border" id="header-mid">
         <div class="header-left">
+          <div class="menu-container" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
           <div class="form-control">
             <h2><a href="./index.html">TIENDA TOBIER</a></h2>
             <input
@@ -45,30 +49,56 @@
             />
             <span class="input-border input-border-alt"></span>
           </div>
+          <h2 class="title-responsive">
+            <a href="./index.html"
+              ><img src="./assets/img/icon.png" alt=""
+            /></a>
+          </h2>
         </div>
 
         <div class="header-rigth">
-          <div class="cart-container" id="cart-btn">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="menu-container" id="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-          </div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
         </div>
       </div>
 
       <nav class="navbar">
-        <ul class="navbar-list">
-          <li><a href="#hero" class="navbar-link">Inicio</a></li>
-          <li><a href="#section-products" class="navbar-link">Productos</a></li>
-          <li>
-            <a href="#section-ofert" class="navbar-link">¿Quienes somos?</a>
-          </li>
-          <li>
-            <a href="#section-ofert" class="navbar-link">Contacto</a>
-          </li>
-          <li><a href="#" class="navbar-link">Ubicacion</a></li>
-        </ul>
+        <div class="nav__up">
+          <h2><a href="./index.html">TIENDA TOBIER</a></h2>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="nav__mid">
+          <ul class="navbar-list">
+            <li>
+              <a href="#">Destacados</a>
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>
+              <a href="#">Hombres</a>
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>
+              <a href="#">Mujer</a>
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>
+              <a href="#">Niño/a</a>
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>
+              <a href="#"> Accesorios </a>
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__down">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-regular fa-circle-question"></i> Ayuda</a
+              ><i class="fa-solid fa-sort-down"></i>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="cart">
         <h2>Tus artículos</h2>

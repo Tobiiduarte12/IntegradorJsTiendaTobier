@@ -21,12 +21,12 @@ html {
   display: block;
 }
 
-.navbar-list li {
+.header-super-up a {
   position: relative;
   padding: 0;
 }
 
-.navbar-list li a::after {
+.header-super-up a::after {
   content: "";
   height: 2px;
   width: 100%;
@@ -40,17 +40,53 @@ html {
   transition: transform 0.3s ease;
 }
 
-.navbar li a:hover::after {
+.header-super-up a:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
 
-.cart-container i:hover {
+.cart-container i:hover,
+.header-super-up figure a i:hover {
   color: greenyellow;
   transition: all 0.2s ease-in;
 }
 
+.menu-container i,
+.nav__up i {
+  position: relative;
+  padding: 0;
+}
+.menu-container i:hover,
+.nav__up i:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 /* ******* ANIMACIONES ****** */
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 @keyframes fade {
   from {
