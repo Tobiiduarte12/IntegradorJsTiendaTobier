@@ -156,6 +156,14 @@ header {
   gap: 40px;
 }
 
+.card__links__menu {
+  display: none;
+}
+
+.open__links {
+  display: flex;
+}
+
 .menu-container {
   display: none;
 }

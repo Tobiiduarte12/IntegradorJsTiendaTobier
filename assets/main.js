@@ -11,8 +11,9 @@ const cart = document.querySelector(".cart");
 const menuToggle = document.querySelector(".navbar");
 const overlay = document.querySelector(".overlay");
 const navbarList = document.querySelector(".navbar-list");
-
-console.log(menuButton);
+const closeBtn = document.querySelector(".close__menu");
+const linkNavMenu = document.querySelector(".link__nav__menu");
+const expandNavLinks = document.querySelector(".card__links__menu");
 
 const openMenu = () => {
   menuToggle.classList.toggle("open-menu");
@@ -67,6 +68,18 @@ const onOverlayClose = () => {
     overlay.classList.remove("show-overlay");
     return;
   }
+};
+
+const closeOnMenu = () => {
+  if (menuToggle.classList.contains("open-menu")) {
+    menuToggle.classList.remove("open-menu");
+    overlay.classList.remove("show-overlay");
+    return;
+  }
+};
+
+const showNavLinks = () => {
+  expandNavLinks.classList.toggle("open__links");
 };
 
 const slideWidth = slider.offsetWidth;
@@ -192,6 +205,8 @@ const init = () => {
   window.addEventListener("scroll", closeOnScroll);
   navbarList.addEventListener("click", closeOnClick);
   overlay.addEventListener("click", onOverlayClose);
+  closeBtn.addEventListener("click", closeOnMenu);
+  linkNavMenu.addEventListener("click", showNavLinks);
 };
 
 init();
