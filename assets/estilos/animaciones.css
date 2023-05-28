@@ -63,7 +63,19 @@ html {
   backface-visibility: hidden;
   perspective: 1000px;
 }
-/* ******* ANIMACIONES ****** */
+
+.menu__item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* transform: rotate(90deg); */
+}
+
+.menu__nesting:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* .menu__arrow:hover {
+  transform: rotate(90deg);
+} */
 
 @keyframes shake {
   10%,
