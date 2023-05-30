@@ -8,7 +8,7 @@ const categoriesList = document.querySelectorAll(".category");
 const menuButton = document.querySelector("#menu-toggle");
 const cartButton = document.querySelector("#cart-btn");
 const cart = document.querySelector(".cart");
-const menuToggle = document.querySelector(".nav__menu__desktop");
+const menuToggle = document.querySelector(".nav__menu");
 const overlay = document.querySelector(".overlay");
 const navbarList = document.querySelector(".nav__menu__list");
 const closeBtn = document.querySelector(".close__menu");
@@ -205,8 +205,8 @@ const init = () => {
   window.addEventListener("scroll", closeOnScroll);
   navbarList.addEventListener("click", closeOnClick);
   overlay.addEventListener("click", onOverlayClose);
-  closeBtn.addEventListener("click", closeOnMenu);
-  linkNavMenu.addEventListener("click", showNavLinks);
+  // closeBtn.addEventListener("click", closeOnMenu);
+  // linkNavMenu.addEventListener("click", showNavLinks);
 };
 
 init();

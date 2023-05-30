@@ -21,12 +21,14 @@ html {
   display: block;
 }
 
-.header-super-up a {
+.header-super-up a,
+.nav-menu--link {
   position: relative;
   padding: 0;
 }
 
-.header-super-up a::after {
+.header-super-up a::after,
+.nav-menu--link::after {
   content: "";
   height: 2px;
   width: 100%;
@@ -40,7 +42,8 @@ html {
   transition: transform 0.3s ease;
 }
 
-.header-super-up a:hover::after {
+.header-super-up a:hover::after,
+.nav-menu--link:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -66,11 +69,10 @@ html {
 
 .menu__item:hover {
   --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  /* transform: rotate(90deg); */
 }
 
-.menu__nesting:hover {
-  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+.menu__inside ul li a:hover {
+  opacity: 0.5;
 }
 
 /* .menu__arrow:hover {
