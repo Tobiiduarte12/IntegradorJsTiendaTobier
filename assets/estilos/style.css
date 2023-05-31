@@ -154,6 +154,16 @@ header {
   display: flex;
 }
 
+.nav__inside__container {
+  width: 70%;
+}
+
+.nav__inside--list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .menu__item {
   --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
   display: flex;
@@ -210,10 +220,6 @@ header {
   font-size: 1.2rem;
   padding: 2px 10px;
   border-radius: 20px;
-}
-
-.menu__link--inside:hover {
-  background-color: rgb(138, 130, 126);
 }
 
 .menu-container {
@@ -603,6 +609,51 @@ header {
   border: none;
   outline: none;
   color: #000;
+}
+
+/* ********* About us ************ */
+#about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  background-color: #b8c9db54;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border: #000;
+}
+
+.about__container h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+}
+
+/* ************** BUTTON UP ************* */
+.btn__up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #313131;
+  padding: 15px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.btn__up.active {
+  visibility: visible;
 }
 
 footer {

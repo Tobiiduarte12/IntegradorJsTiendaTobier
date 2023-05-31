@@ -14,6 +14,7 @@ const navbarList = document.querySelector(".nav__menu__list");
 const closeBtn = document.querySelector(".close__menu");
 const linkNavMenu = document.querySelector(".link__nav__menu");
 const expandNavLinks = document.querySelector(".card__links__menu");
+const buttonUp = document.querySelector(".btn__up");
 
 const openMenu = () => {
   menuToggle.classList.toggle("open-menu");
@@ -196,6 +197,14 @@ const applyFilter = ({ target }) => {
   renderProducts(appState.products[0]);
 };
 
+const showButtonUp = () => {
+  buttonUp.classList.add("active");
+};
+
+const uploadButton = () => {
+  window.scrollTo({ top: 0 });
+};
+
 const init = () => {
   renderProducts(appState.products[appState.currentProductsIndex]);
   showMoreBtn.addEventListener("click", showMoreProducts);
@@ -207,6 +216,8 @@ const init = () => {
   overlay.addEventListener("click", onOverlayClose);
   // closeBtn.addEventListener("click", closeOnMenu);
   // linkNavMenu.addEventListener("click", showNavLinks);
+  buttonUp.addEventListener("click", uploadButton);
+  window.addEventListener("scroll", showButtonUp);
 };
 
 init();

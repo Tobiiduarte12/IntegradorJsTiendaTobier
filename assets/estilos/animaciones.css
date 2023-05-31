@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 140px;
 }
 
 .overlay {
@@ -22,17 +22,19 @@ html {
 }
 
 .header-super-up a,
-.nav-menu--link {
+.nav-menu--link,
+.nav__inside--list li a {
   position: relative;
   padding: 0;
 }
 
 .header-super-up a::after,
-.nav-menu--link::after {
+.nav-menu--link::after,
+.nav__inside--list li a::after {
   content: "";
   height: 2px;
   width: 100%;
-  background: linear-gradient(90deg, #ff6464 0%, #ffbf59 50%, #47c9ff 100%);
+  background: #ffff;
 
   position: absolute;
   bottom: 0;
@@ -43,7 +45,8 @@ html {
 }
 
 .header-super-up a:hover::after,
-.nav-menu--link:hover::after {
+.nav-menu--link:hover::after,
+.nav__inside--list li a:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -60,7 +63,8 @@ html {
   padding: 0;
 }
 .menu-container i:hover,
-.nav__up i:hover {
+.nav__up i:hover,
+.title__icon:hover {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -72,6 +76,10 @@ html {
 }
 
 .menu__inside ul li a:hover {
+  opacity: 0.5;
+}
+
+.menu__link--inside:hover {
   opacity: 0.5;
 }
 
