@@ -790,6 +790,7 @@ header {
   width: 100%;
   height: auto;
   max-height: 400px;
+  max-width: 300px;
 }
 
 .btn-add-product {
@@ -928,7 +929,7 @@ footer p span a:hover {
   position: fixed;
   bottom: 0;
   width: 100%;
-  transition: all 0.5s ease-out;
+  transition: all 2s ease-out;
   transform: translateY(200%);
 }
 

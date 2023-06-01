@@ -307,7 +307,7 @@ const updateCartState = () => {
   // GUARDAR  CARRITO EN LC
   saveCart();
   // RENDERIZAR CARRITO
-  createCartProductsTemplate();
+  renderCart();
   // MOSTRAR EL TOTAL DEL CARRITO
   showCartTotal();
   // CHECKEAR DISABLE DE BOTONES
@@ -366,7 +366,7 @@ const handleMinusBtnEvent = (id) => {
 
 const handlePlusBtnEvent = (id) => {
   const existingCartProduct = cart.find((item) => item.id === id);
-  addProduct(existingCartProduct);
+  addUnitToProduct(existingCartProduct);
 };
 
 const handleQuantity = (e) => {
@@ -376,6 +376,33 @@ const handleQuantity = (e) => {
     handlePlusBtnEvent(e.target.dataset.id);
   }
   updateCartState();
+};
+
+const resetCartItem = () => {
+  cart = [];
+  updateCartState();
+};
+
+const completeCartAction = (confirmMensagge, successMensagge) => {
+  if (!cart.length) return;
+  if (window.confirm(confirmMensagge)) {
+    resetCartItem();
+    alert(successMensagge);
+  }
+};
+
+const completeBuy = () => {
+  completeCartAction(
+    "¿Desea completar su compra?",
+    "!Gracias por su compra y confiar en nosotros!"
+  );
+};
+
+const deleteCart = () => {
+  completeCartAction(
+    "¿Desea vaciar todo Tuca Rito?",
+    "Tuca Rito se ha vaciado"
+  );
 };
 
 const init = () => {
@@ -394,6 +421,8 @@ const init = () => {
   document.addEventListener("DOMContentLoaded", showCartTotal);
   productsContainer.addEventListener("click", addProduct);
   cardProductsCart.addEventListener("click", handleQuantity);
+  buyButton.addEventListener("click", completeBuy);
+  deleteButton.addEventListener("click", deleteCart);
   disableButton(buyButton);
   disableButton(deleteButton);
   renderCartBubble();
