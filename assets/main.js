@@ -8,11 +8,10 @@ const categoriesList = document.querySelectorAll(".category");
 const menuButton = document.querySelector("#menu-toggle");
 const cartButton = document.querySelector("#cart-btn");
 const cart = document.querySelector(".cart");
-const menuToggle = document.querySelector(".nav__menu");
+const menuToggle = document.querySelector(".nav__menu--mobile");
 const overlay = document.querySelector(".overlay");
 const navbarList = document.querySelector(".nav__menu__list");
 const closeBtn = document.querySelector(".close__menu");
-const linkNavMenu = document.querySelector(".link__nav__menu");
 const expandNavLinks = document.querySelector(".card__links__menu");
 const buttonUp = document.querySelector(".btn__up");
 
@@ -109,9 +108,7 @@ const renderProductsTemplate = (product) => {
 
   return `
   <div class="card-product">
-    <figure class="card-img-container">
-        <img src= ${image} alt=${name} />
-    </figure>
+  <img class="img__card__product" src= ${image} alt=${name} />
     <div class="card-product-info">
       <h3>${name}</h3>
         <p>${description}</p>
@@ -214,8 +211,7 @@ const init = () => {
   window.addEventListener("scroll", closeOnScroll);
   navbarList.addEventListener("click", closeOnClick);
   overlay.addEventListener("click", onOverlayClose);
-  // closeBtn.addEventListener("click", closeOnMenu);
-  // linkNavMenu.addEventListener("click", showNavLinks);
+  closeBtn.addEventListener("click", closeOnMenu);
   buttonUp.addEventListener("click", uploadButton);
   window.addEventListener("scroll", showButtonUp);
 };

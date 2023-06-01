@@ -8,14 +8,6 @@ const productsData = [
     category: "remeras",
   },
   {
-    id: 14,
-    name: "Remera CocoAk47",
-    description: "Talles: XL X L S ",
-    price: "1600",
-    image: "./assets/img/remera--mari2.png",
-    category: "remeras",
-  },
-  {
     id: 15,
     name: "Remera CocoAk47",
     description: "Talles: XL X L S ",
@@ -24,11 +16,19 @@ const productsData = [
     category: "remeras",
   },
   {
-    id: 16,
-    name: "Remera CocoAk47",
+    id: 14,
+    name: "Remera Crazy Band",
     description: "Talles: XL X L S ",
-    price: "1600",
-    image: "./assets/img/remera--mari4.png",
+    price: "1800",
+    image: "./assets/img/remeraCrazy--front.jpg",
+    category: "remeras",
+  },
+  {
+    id: 16,
+    name: "Remera Crazy Band",
+    description: "Talles: XL X L S ",
+    price: "1800",
+    image: "./assets/img/remeraCrazy--back.jpg",
     category: "remeras",
   },
   {
