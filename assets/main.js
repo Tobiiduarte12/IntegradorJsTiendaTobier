@@ -119,16 +119,18 @@ const renderProductsTemplate = (product) => {
   const { id, name, description, price, image } = product;
 
   return `
-  <div class="card-product">
-  <img class="img__card__product" src= ${image} alt=${name} />
-    <div class="card-product-info">
-      <h3>${name}</h3>
-        <p>${description}</p>
-        <span>$ ${price}</span>
-        <button class="btn-add-product" data-id = "${id}" data-name="${name}" data-img="${image}" data-price="${price}">Agregar al carrito</button>
-    </div>
-   </div>
-  `;
+    <div class="card-product">
+      <div class="card-product-info">
+          <h3>${name}</h3>
+          <p>${description}</p>
+          <span>$ ${price}</span>
+      </div>
+      <div class="cover">
+        <img class="img__card__product" src= ${image} alt=${name} />
+        </div>
+
+              <button class="btn-add-product" data-id = "${id}" data-name="${name}" data-img="${image}" data-price="${price}"><i class="fa-solid fa-cart-arrow-down icono"></i><span>ADD</span></button>
+   </div> `;
 };
 
 const renderProducts = (productstList) => {
@@ -326,7 +328,7 @@ const addProduct = (e) => {
   //  SI EL PRODUCTO YA EXISTE, AGREGAMOS UNIDAD AL PRODUCTO Y DAMOS FEEDBACK
   if (isExistingCardProduct(product.id)) {
     addUnitToProduct(product);
-    showSuccessModal("Se agrego una unidad a Tuca Rito");
+    showSuccessModal(`Se agrego una unidad a Tuca Rito `);
   } else {
     // SI EL PRODUCTO NO EXISTE, CREAMOS EL NUEVO PRODUCTO Y DAMOS FEEDBACK
     createCartProduct(product);
