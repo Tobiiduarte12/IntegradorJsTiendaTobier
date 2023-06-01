@@ -61,15 +61,6 @@
               </ul>
             </nav>
           </div>
-          <!-- 
-          <h2 class="title-responsive">
-            <a href="./index.html"
-              ><img
-                src="./assets/img/logo knuto.png"
-                alt="logo"
-                class="img-logo"
-            /></a>
-          </h2> -->
         </div>
         <div class="header-rigth">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -283,25 +274,36 @@
 
       <div class="cart">
         <h2>Tus artículos</h2>
-        <div class="cart-card">
-          <img src="#" alt="" />
-          <div class="item-info">
-            <h3 class="item-tittle">Capibara <span>(40)</span></h3>
-            <p class="item-ofert">$ 1.200</p>
-            <!-- <p class="item-price">Precio normal:<span>$1.100</span></p> -->
-          </div>
-          <div class="item-handler">
-            <span class="quantity-handler down">-</span>
-            <span class="item-quantity">1</span>
-            <span class="quantity-handler up">+</span>
+        <div class="cart__items--container">
+          <div class="cart-card">
+            <img src="./assets/img/calzado1.png" alt="" />
+            <div class="item-info">
+              <h3 class="item-tittle">Capibara <span>(40)</span></h3>
+              <p class="item-ofert">$ 1.200</p>
+              <!-- <p class="item-price">Precio normal:<span>$1.100</span></p> -->
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
           </div>
         </div>
 
         <div class="cart-total">
           <p>Total:</p>
-          <span>$4395</span>
+          <span>$ 4395</span>
+          <div class="buttons--container">
+            <button class="btn-primary">
+              <i class="fa-solid fa-money-bill-1-wave icono"></i>
+              <span>Comprar</span>
+            </button>
+            <button class="btn-primary--two">
+              <i class="fa-regular fa-trash-can icono trash"></i>
+              <span>Vaciar carrito</span>
+            </button>
+          </div>
         </div>
-        <button class="btn-add">comprar</button>
       </div>
       <div class="overlay"></div>
     </header>

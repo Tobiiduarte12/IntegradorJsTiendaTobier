@@ -133,19 +133,19 @@
 }
 
 @media (max-width: 600px) {
-  .title-responsive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .cart-total {
+    flex-direction: column;
     width: 100%;
-    margin-left: 50px;
   }
 
-  .title-responsive a img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid white;
+  .btn-primary,
+  .btn-primary--two {
+    width: 200px;
+  }
+
+  .btn-primary:hover span,
+  .btn-primary--two:hover span {
+    left: -55px;
   }
 
   .navbar {
