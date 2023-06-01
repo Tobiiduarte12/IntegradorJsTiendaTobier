@@ -138,6 +138,11 @@
     width: 100%;
   }
 
+  .cart {
+    width: 80%;
+    min-width: none;
+  }
+
   .btn-primary,
   .btn-primary--two {
     width: 200px;
@@ -170,6 +175,14 @@
   .about__container {
     width: 70%;
     padding: 10px 30px;
+  }
+
+  .buttons--container {
+    flex-direction: column-reverse;
+  }
+
+  .cart h2 {
+    font-size: 1.6rem;
   }
 
   footer {

@@ -64,7 +64,9 @@
         </div>
         <div class="header-rigth">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
+          <i class="fa-solid fa-cart-shopping" id="cart-btn"
+            ><div class="cart-bubble">0</div></i
+          >
         </div>
       </div>
       <nav class="nav__menu">
@@ -273,34 +275,35 @@
       </nav> -->
 
       <div class="cart">
-        <h2>Tus artículos</h2>
+        <h2>Tuca Rito <i class="fa-solid fa-joint icon-tuca"></i></h2>
         <div class="cart__items--container">
-          <div class="cart-card">
+          <!-- <div class="cart-card">
             <img src="./assets/img/calzado1.png" alt="" />
             <div class="item-info">
               <h3 class="item-tittle">Capibara <span>(40)</span></h3>
               <p class="item-ofert">$ 1.200</p>
-              <!-- <p class="item-price">Precio normal:<span>$1.100</span></p> -->
             </div>
             <div class="item-handler">
               <span class="quantity-handler down">-</span>
               <span class="item-quantity">1</span>
               <span class="quantity-handler up">+</span>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="cart-total">
-          <p>Total:</p>
-          <span>$ 4395</span>
+          <div class="cart__total--bid">
+            <p>Total:</p>
+            <span class="total__price"></span>
+          </div>
           <div class="buttons--container">
-            <button class="btn-primary">
-              <i class="fa-solid fa-money-bill-1-wave icono"></i>
-              <span>Comprar</span>
-            </button>
-            <button class="btn-primary--two">
+            <button class="btn-primary--two button__delete">
               <i class="fa-regular fa-trash-can icono trash"></i>
               <span>Vaciar carrito</span>
+            </button>
+            <button class="btn-primary button__buy">
+              <i class="fa-solid fa-money-bill-1-wave icono"></i>
+              <span>Comprar</span>
             </button>
           </div>
         </div>
@@ -458,6 +461,7 @@
         Todos los derechos reservados.
       </p>
     </footer>
+    <div class="add-modal"></div>
     <script src="./assets/data.js"></script>
     <script src="./assets/main.js"></script>
   </body>

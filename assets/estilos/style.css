@@ -242,11 +242,19 @@ header {
   justify-content: space-between;
   overflow-y: scroll;
   z-index: 20;
-  width: 80%;
+  width: 60%;
   border: 1px solid white;
   border-radius: 5px 0 0 0;
   transform: translateX(200%);
   transition: all 0.5s ease-in-out;
+}
+
+.icon-heart {
+  color: rgb(170, 44, 65);
+}
+
+.icon-tuca {
+  color: rgb(134, 26, 7);
 }
 
 .cart h2 {
@@ -255,13 +263,31 @@ header {
   margin-bottom: 20px;
 }
 
+.cart-bubble {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  text-align: center;
+  background: red;
+  color: #ffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
 .cart__items--container {
   width: 100%;
   display: flex;
-  flex-direction: column;
   background-color: #212121;
+  flex-wrap: wrap;
+  gap: 20px;
   border-radius: 20px;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   padding: 40px 0px;
@@ -279,13 +305,14 @@ header {
   border-radius: 10px;
   margin-bottom: 30px;
   border: 1px solid greenyellow;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 0px 20px;
 }
 
 .cart-card img {
   width: 80px;
   height: auto;
+  border-radius: 10px;
 }
 
 .item-info {
@@ -324,6 +351,9 @@ header {
 
 .cart-total {
   display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 5px;
   margin: 10px;
   align-items: center;
@@ -331,9 +361,14 @@ header {
   padding-top: 10px;
 }
 
+.cart__total--bid {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .buttons--container {
   display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
@@ -452,6 +487,7 @@ header {
   color: #ffff;
   opacity: 0;
 }
+
 .cart::-webkit-scrollbar {
   display: none;
 }
@@ -880,4 +916,38 @@ footer p span a {
 
 footer p span a:hover {
   color: #fff;
+}
+
+.add-modal {
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(200%);
+}
+
+.active-modal {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
+}
+
+.disable {
+  background-color: #313131;
+  color: white;
+  cursor: not-allowed;
+  border: none;
+  display: none;
+}
+
+.disable:hover {
+  background-color: #313131;
+  color: white;
+  cursor: not-allowed;
+  border: none;
 }
