@@ -20,6 +20,7 @@ const succesModal = document.querySelector(".add-modal");
 const buyButton = document.querySelector(".button__buy");
 const deleteButton = document.querySelector(".button__delete");
 const cartBubble = document.querySelector(".cart-bubble");
+const inputEmail = document.querySelector(".form-ofert");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -407,6 +408,22 @@ const deleteCart = () => {
   );
 };
 
+const isValidateEmail = (input) => {
+  const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  return re.test(input.value.trim());
+};
+
+const inputEmailEvent = (e) => {
+  e.preventDefault();
+  if (!isValidateEmail) {
+    return;
+  }
+  alert(
+    "¡Gracias por subscribirte! Te estaremos enviando las ultimas novedades."
+  );
+  e.target.reset();
+};
+
 const init = () => {
   renderProducts(appState.products[appState.currentProductsIndex]);
   showMoreBtn.addEventListener("click", showMoreProducts);
@@ -428,6 +445,7 @@ const init = () => {
   disableButton(buyButton);
   disableButton(deleteButton);
   renderCartBubble();
+  inputEmail.addEventListener("submit", inputEmailEvent);
 };
 
 init();

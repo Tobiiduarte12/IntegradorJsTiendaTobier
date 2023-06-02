@@ -893,7 +893,7 @@ header {
   color: #000;
 }
 
-/* {.btn-add-prodreuct {
+.send__Email {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -909,10 +909,10 @@ header {
   margin-bottom: 15px;
 }
 
-.btn-add-product:hover {
+.send__Email:hover {
   background-color: #fff;
   color: #000;
-}} */
+}
 
 .hidden {
   visibility: hidden;
