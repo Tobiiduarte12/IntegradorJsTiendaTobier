@@ -916,7 +916,8 @@ header {
   color: #000;
 }
 
-.send__Email {
+.send__Email,
+.btn-send {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -932,7 +933,8 @@ header {
   margin-bottom: 15px;
 }
 
-.send__Email:hover {
+.send__Email:hover,
+.btn-send:hover {
   background-color: #fff;
   color: #000;
 }
@@ -1025,7 +1027,7 @@ header {
 .select-Focus {
   background-color: rgb(136, 24, 24);
   border: 1px solid red;
-  color: white;
+  color: #ffff;
   z-index: 100;
 }
 
@@ -1082,4 +1084,82 @@ footer p span a:hover {
   color: white;
   cursor: not-allowed;
   border: none;
+}
+
+/* *********** Register ********** */
+
+#hero__register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title__container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title__container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  max-width: 380px;
+  color: transparent;
+  background: linear-gradient(
+    0deg,
+    rgb(211, 211, 211) 0%,
+    rgb(54, 54, 94) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title__container p span a:hover {
+  color: red;
+}
+
+.already__account {
+  margin-top: 40px;
+}
+
+.form-container {
+  display: flex;
+  height: 70%;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+
+.form-register {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__field--container {
+  display: flex;
+  background-color: #7269815d;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 30px;
+  height: 340px;
+  width: 700px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.form__field input {
+  color: black;
+}
+
+.form__field input:focus {
+  color: white;
 }

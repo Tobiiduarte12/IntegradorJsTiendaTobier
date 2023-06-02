@@ -130,6 +130,24 @@
     transform: translateX(0);
     transition: all 0.5s ease-in-out;
   }
+
+  .form__field--container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .title__container h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-register {
+    width: 500px;
+  }
+
+  .form__field--container {
+    height: 400px;
+  }
 }
 
 @media (max-width: 600px) {

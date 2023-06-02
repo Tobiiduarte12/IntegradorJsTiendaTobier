@@ -254,6 +254,16 @@ const init = () => {
   inputPhone.addEventListener("input", () => checkPhone(inputPhone));
   inputName.addEventListener("focus", selectFocus);
   inputName.addEventListener("blur", selectFocus);
+  inputLastName.addEventListener("focus", selectFocus);
+  inputLastName.addEventListener("blur", selectFocus);
+  inputUser.addEventListener("focus", selectFocus);
+  inputUser.addEventListener("blur", selectFocus);
+  inputEmail.addEventListener("focus", selectFocus);
+  inputEmail.addEventListener("blur", selectFocus);
+  inputPass.addEventListener("focus", selectFocus);
+  inputPass.addEventListener("blur", selectFocus);
+  inputPhone.addEventListener("focus", selectFocus);
+  inputPhone.addEventListener("blur", selectFocus);
 };
 
 init();
