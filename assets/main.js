@@ -20,7 +20,8 @@ const succesModal = document.querySelector(".add-modal");
 const buyButton = document.querySelector(".button__buy");
 const deleteButton = document.querySelector(".button__delete");
 const cartBubble = document.querySelector(".cart-bubble");
-const inputEmail = document.querySelector(".form-ofert");
+const ofertFormEmail = document.querySelector(".form-ofert");
+const inputEmail = document.querySelector(".input-email");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -408,18 +409,72 @@ const deleteCart = () => {
   );
 };
 
+// const inputEmailEvent = (e) => {
+//   e.preventDefault();
+//   alert(
+//     "¡Gracias por subscribirte! Te estaremos enviando las ultimas novedades."
+//   );
+//   e.target.reset();
+// };
+
+const showError = (input, message) => {
+  const formField = input.parentElement;
+  formField.classList.remove("success");
+  formField.classList.add("error");
+  const error = formField.querySelector("small");
+  error.style.display = "block";
+  error.textContent = message;
+};
+
+const showSuccess = (input) => {
+  const formField = input.parentElement;
+  formField.classList.remove("error");
+  formField.classList.add("success");
+  const error = formField.querySelector("small");
+  error.style.display = "none";
+  error.textContent = "";
+};
+
 const isValidateEmail = (input) => {
   const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
   return re.test(input.value.trim());
 };
 
-const inputEmailEvent = (e) => {
+const isEmpty = (input) => {
+  return !input.value.trim().length;
+};
+
+const checkEmail = (input) => {
+  let valid = false;
+
+  // SI NO ESTA VACIO
+  if (isEmpty(input)) {
+    showError(input, "El email es obligatorio");
+    return;
+  }
+  // SI ES UN EMAIL
+  if (!isValidateEmail(input)) {
+    showError(input, "El email no es valido");
+    return;
+  }
+
+  //BORRAMOS ERROR
+  showSuccess(input);
+  valid = true;
+  return valid;
+};
+
+const submitHandler = (e) => {
+  // 1: PREVENIR EL COMPORTAMIENTO POR DEFECTO
   e.preventDefault();
-  if (!isValidateEmail) {
+  let isEmailValid = checkEmail(inputEmail);
+
+  let isValidForm = isEmailValid;
+  if (!isValidForm) {
     return;
   }
   alert(
-    "¡Gracias por subscribirte! Te estaremos enviando las ultimas novedades."
+    "¡Gracias por subscribirte! Te estaremos mandando las ultimas novedades"
   );
   e.target.reset();
 };
@@ -445,7 +500,8 @@ const init = () => {
   disableButton(buyButton);
   disableButton(deleteButton);
   renderCartBubble();
-  inputEmail.addEventListener("submit", inputEmailEvent);
+  ofertFormEmail.addEventListener("submit", submitHandler);
+  inputEmail.addEventListener("input", () => checkEmail(inputEmail));
 };
 
 init();

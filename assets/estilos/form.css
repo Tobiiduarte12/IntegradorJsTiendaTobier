@@ -4,7 +4,11 @@
 }
 
 .form__field small {
-  color: red;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: red;
+  border-radius: 8px;
   max-width: 350px;
   text-align: center;
   justify-content: center;
@@ -13,11 +17,12 @@
 }
 
 .form__field.success input {
-  border: 1px solid green;
+  border: 2px solid rgb(0, 255, 0);
 }
 
 #form__error {
-  color: red;
+  color: #ffff;
+  background-color: red;
   font-size: 1rem;
   margin: 5px 0px;
   max-width: 350px;
