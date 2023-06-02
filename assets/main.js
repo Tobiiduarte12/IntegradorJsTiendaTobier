@@ -334,7 +334,7 @@ const addProduct = (e) => {
   } else {
     // SI EL PRODUCTO NO EXISTE, CREAMOS EL NUEVO PRODUCTO Y DAMOS FEEDBACK
     createCartProduct(product);
-    showSuccessModal("Se agrego un nuevo producto a Tuca Rito");
+    showSuccessModal(`Se agrego un nuevo producto a Tuca Rito `);
   }
 
   // ACTUALIZAMOS DATA DEL CART
@@ -395,11 +395,14 @@ const completeCartAction = (confirmMensagge, successMensagge) => {
   }
 };
 
+const jsConfetti = new JSConfetti();
+
 const completeBuy = () => {
   completeCartAction(
     "¿Desea completar su compra?",
     "!Gracias por su compra y confiar en nosotros!"
   );
+  jsConfetti.addConfetti();
 };
 
 const deleteCart = () => {
@@ -408,14 +411,6 @@ const deleteCart = () => {
     "Tuca Rito se ha vaciado"
   );
 };
-
-// const inputEmailEvent = (e) => {
-//   e.preventDefault();
-//   alert(
-//     "¡Gracias por subscribirte! Te estaremos enviando las ultimas novedades."
-//   );
-//   e.target.reset();
-// };
 
 const showError = (input, message) => {
   const formField = input.parentElement;
@@ -496,6 +491,7 @@ const init = () => {
   productsContainer.addEventListener("click", addProduct);
   cardProductsCart.addEventListener("click", handleQuantity);
   buyButton.addEventListener("click", completeBuy);
+  // buyButton.addEventListener("")
   deleteButton.addEventListener("click", deleteCart);
   disableButton(buyButton);
   disableButton(deleteButton);
