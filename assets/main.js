@@ -400,7 +400,7 @@ const jsConfetti = new JSConfetti();
 const completeBuy = () => {
   completeCartAction(
     "¿Desea completar su compra?",
-    "!Gracias por su compra y confiar en nosotros!"
+    "❤️ !Gracias por su compra y por confiar en nosotros! ❤️"
   );
   jsConfetti.addConfetti();
 };
@@ -491,7 +491,6 @@ const init = () => {
   productsContainer.addEventListener("click", addProduct);
   cardProductsCart.addEventListener("click", handleQuantity);
   buyButton.addEventListener("click", completeBuy);
-  // buyButton.addEventListener("")
   deleteButton.addEventListener("click", deleteCart);
   disableButton(buyButton);
   disableButton(deleteButton);

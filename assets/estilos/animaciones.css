@@ -22,6 +22,7 @@ html {
 }
 
 .header-super-up a,
+.header-super-up--register a,
 .nav-menu--link,
 .nav__inside--list li a {
   position: relative;
@@ -29,6 +30,7 @@ html {
 }
 
 .header-super-up a::after,
+.header-super-up--register a::after,
 .nav-menu--link::after,
 .nav__inside--list li a::after {
   content: "";
@@ -45,6 +47,7 @@ html {
 }
 
 .header-super-up a:hover::after,
+.header-super-up--register a:hover::after,
 .nav-menu--link:hover::after,
 .nav__inside--list li a:hover::after {
   transform-origin: bottom left;
@@ -52,7 +55,8 @@ html {
 }
 
 .cart-container i:hover,
-.header-super-up figure a i:hover {
+.header-super-up figure a i:hover,
+.header-super-up--register figure a i:hover {
   color: greenyellow;
   transition: all 0.2s ease-in;
 }

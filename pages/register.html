@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registrarse</title>
     <link rel="stylesheet" href="../assets/estilos/form.css" />
+    <link rel="stylesheet" href="../assets/estilos/style.css" />
+    <link rel="stylesheet" href="../assets/estilos/animaciones.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,40 +17,25 @@
     />
   </head>
   <body>
-    <header>
-      <div class="header-up">
-        <div class="header-rigth">
-          <h2><a href="../index.html">Tienda Tobier</a></h2>
-          <input type="text" class="input-search" placeholder="" />
-        </div>
-
-        <div class="header-left">
-          <div class="header-links">
-            <a href="#">Ayuda</a>
-            <i class="fa-regular fa-comments"></i>
-          </div>
-          <div class="header-links">
-            <a href="#">Mi carrito</a>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+    <header class="header__register">
+      <div class="header-super-up--register">
+        <figure>
+          <a
+            href="https://www.growbarato.net/blog/la-mejor-marihuana-del-mundo/"
+            target="_blank"
+            ><i class="fa-solid fa-cannabis"></i
+          ></a>
+        </figure>
+        <div class="header-super-up-left">
+          <a href="./pages/login.html">Iniciar sesion</a>
         </div>
       </div>
-
-      <div class="header-down">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">¿Quienes somos?</a></li>
-            <li><a href="#">Ubicacion</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div class="overlay"></div>
     </header>
 
-    <section id="hero">
+    <section id="hero__register">
       <div class="form-container">
-        <h1>Registrate de forma muy facil!</h1>
+        <h1>¡Registrate de forma muy facil!</h1>
         <form class="form-login" id="register-form">
           <div class="form__field">
             <input
@@ -102,6 +89,17 @@
         </p>
       </div>
     </section>
+    <footer>
+      <p>
+        &copy; 2023
+        <span
+          ><a href="https://github.com/Tobiiduarte12" target="_blank"
+            >Tienda TOBIER.</a
+          ></span
+        >
+        Todos los derechos reservados.
+      </p>
+    </footer>
     <script src="../assets/register.js"></script>
   </body>
 </html>

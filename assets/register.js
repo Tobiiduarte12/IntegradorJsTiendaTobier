@@ -238,6 +238,10 @@ const submitHandler = (e) => {
   }
 };
 
+function selectFocus() {
+  this.classList.toggle("select-Focus");
+}
+
 //  AGREGAR EVENTOS Y EJECUTAR FUNCIONES
 
 const init = () => {
@@ -248,6 +252,8 @@ const init = () => {
   inputEmail.addEventListener("input", () => checkEmail(inputEmail));
   inputPass.addEventListener("input", () => checkPassword(inputPass));
   inputPhone.addEventListener("input", () => checkPhone(inputPhone));
+  inputName.addEventListener("focus", selectFocus);
+  inputName.addEventListener("blur", selectFocus);
 };
 
 init();
