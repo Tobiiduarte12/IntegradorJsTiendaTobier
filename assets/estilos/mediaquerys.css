@@ -138,9 +138,8 @@
 
 @media (max-width: 760px) {
   .title__container h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-
   .form-register {
     width: 500px;
   }
@@ -159,6 +158,23 @@
   .cart {
     width: 80%;
     min-width: none;
+  }
+
+  .title__container h1 {
+    font-size: 1.4rem;
+  }
+
+  .already__account {
+    font-size: .8rem;
+  }
+  
+  .form-register {
+    width: 400px;
+    flex-wrap: wrap;
+  }
+
+  .form__field--container {
+    padding: 0;
   }
 
   .btn-primary,
@@ -207,7 +223,7 @@
     text-align: center;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 470px) {
     .card-img-container img {
       width: 300px;
     }
@@ -230,6 +246,36 @@
 
     .slide a {
       font-size: 1rem;
+    }
+
+    .title__container {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .title__container h1 {
+      font-size: 1rem;
+    }
+  
+    .already__account {
+      font-size: .8rem;
+    }
+
+    .form-register {
+      width: 200px;
+      flex-wrap: wrap;
+    }
+
+    .form__field {
+      font-size: .8rem;
+    }
+
+    .form__field small {
+      color: #fff;
+      font-size: 0.6Drem;
+      padding: 2px 5px;
+      align-items: center;
+      position: absolute;
     }
 
     footer p {
