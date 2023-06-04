@@ -185,7 +185,7 @@ const checkPhone = (input) => {
 
   //REVISAMOS QUE EL TELEFONO SEA VALIDO
   if (!isValidatePhone(input)) {
-    showError(input, "Tu numero de celular no es valido 🚫");
+    showError(input, "Ingresa tu numero de celular sin +, ni 0 🚫");
     return;
   }
 
