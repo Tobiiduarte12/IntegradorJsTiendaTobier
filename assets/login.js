@@ -32,24 +32,24 @@ const isValidAccount = () => {
   let valid = false;
   // SI EMAIL ESTA VACIO, MUESTRO ERROR
   if (isEmpty(inputEmail)) {
-    showError("No ingresaste el email");
+    showError("No ingresaste el email ❌");
     return;
   }
 
   //SI PASSWORD ESTA VACIO
   if (isEmpty(inputPass)) {
-    showError("No ingresaste la contraseña");
+    showError("No ingresaste la contraseña ❌");
     return;
   }
   //CONTROLAMOS QUE EXISTA EL EMAIL
   if (!isExistingEmail(inputEmail)) {
-    showError(`¡ups! Parece que no estás registrado`);
+    showError(`¡ups! Parece que no estás registrado 😞`);
     return;
   }
 
   //SI COINCIDE EMAIL Y PASS
   if (!isMatchingPass()) {
-    showError("El email y/o la contraseña no coinciden");
+    showError("El email y/o la contraseña no coinciden 🚫");
     return;
   }
 

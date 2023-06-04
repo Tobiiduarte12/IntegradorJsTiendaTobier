@@ -74,7 +74,7 @@ const checkTextInput = (input) => {
   // SI EL INPUT ESTA VACIO, MUESTRO ERROR
   if (isEmpty(input)) {
     // "muestro error"
-    showError(input, "Este campo es obligatorio");
+    showError(input, "Este campo es obligatorio ⚠️");
     // "retorno"
     return;
   }
@@ -83,7 +83,7 @@ const checkTextInput = (input) => {
     //MUESTRO ERROR
     showError(
       input,
-      `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres.`
+      `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres. 🚫`
     );
     // RETORNAMOS
     return;
@@ -101,7 +101,7 @@ const checkUser = (input) => {
 
   //SI EL CAMPO ESTA VACIO, MUESTRO ERROR
   if (isEmpty(input)) {
-    showError(input, "El usuario es obligatorio");
+    showError(input, "El usuario es obligatorio ⚠️");
     return;
   }
 
@@ -109,13 +109,13 @@ const checkUser = (input) => {
   if (!isBetween(input, minCharacters, maxCharacters)) {
     showError(
       input,
-      `Tu usuario debe tener entre ${minCharacters} y ${maxCharacters} caracteres.`
+      `Tu usuario debe tener entre ${minCharacters} y ${maxCharacters} caracteres. 🚫`
     );
     return;
   }
   //REVISAR QUE EL USUARIO NO EXISTA
   if (isExistingUser(input)) {
-    showError(input, `${input.value} ya esta en uso`);
+    showError(input, `${input.value} ya esta en uso 😬`);
     return;
   }
 
@@ -130,18 +130,18 @@ const checkEmail = (input) => {
 
   // SI NO ESTA VACIO
   if (isEmpty(input)) {
-    showError(input, "El email es obligatorio");
+    showError(input, "El email es obligatorio ⚠️");
     return;
   }
   // SI ES UN EMAIL
   if (!isValidateEmail(input)) {
-    showError(input, "El email no es valido");
+    showError(input, "El email no es valido 🚫");
     return;
   }
 
   // REVISAR QUE NO EXISTA EL EMAIL
   if (isExistingEmail(input)) {
-    showError(input, `${input.value} ya esta en uso`);
+    showError(input, `${input.value} ya esta en uso 😬`);
     return;
   }
 
@@ -156,7 +156,7 @@ const checkPassword = (input) => {
 
   //SI EL INPUT ESTA VACIO, MOSTAMOS ERROR
   if (isEmpty(input)) {
-    showError(input, "Este campo es obligatorio");
+    showError(input, "Este campo es obligatorio ⚠️");
     return;
   }
 
@@ -164,7 +164,7 @@ const checkPassword = (input) => {
   if (!isSecurityPass(input)) {
     showError(
       input,
-      "Tu contraseña debe tener al menos un simbolo, un numero, una mayuscula y contener minimo 8 caracteres"
+      "Ingresa al menos 1 caracter especial, 1 numero, 1 mayuscula y minimo 8 caracteres ⚠️"
     );
     return;
   }
@@ -179,13 +179,13 @@ const checkPhone = (input) => {
 
   //SI EL INPUT ESTA VACIO, MOSTRAMOS ERROR
   if (isEmpty(input)) {
-    showError(input, "Este campo es obligatorio");
+    showError(input, "Este campo es obligatorio ⚠️");
     return;
   }
 
   //REVISAMOS QUE EL TELEFONO SEA VALIDO
   if (!isValidatePhone(input)) {
-    showError(input, "Tu numero de celular no es valido");
+    showError(input, "Tu numero de celular no es valido 🚫");
     return;
   }
 
