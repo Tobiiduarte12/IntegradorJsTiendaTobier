@@ -239,7 +239,7 @@ const submitHandler = (e) => {
     //6: REDIRECCIONAR AL USUARIO AL LOGIN
     setInterval(() => {
       window.location.href = "login.html";
-    }, 1400);
+    }, 1500);
   }
 };
 
