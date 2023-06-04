@@ -135,7 +135,11 @@ const checkEmail = (input) => {
   }
   // SI ES UN EMAIL
   if (!isValidateEmail(input)) {
-    showError(input, "El email no es valido 🚫");
+    showError(
+      input,
+      `Debe tener formato de mail. Ej: nombre@mail.com.
+    🚫`
+    );
     return;
   }
 
