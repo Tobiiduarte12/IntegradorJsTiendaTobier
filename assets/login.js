@@ -1,7 +1,7 @@
 //TRAEMOS LOS ELEMENTOS
 const loginForm = document.querySelector("#form-login");
-const emailInput = document.querySelector("#user");
-const passInput = document.querySelector("#password");
+const inputEmail = document.querySelector("#user");
+const inputPass = document.querySelector("#password");
 const errorField = document.querySelector("#form__error");
 
 const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -24,32 +24,32 @@ const isExistingEmail = (input) => {
 };
 
 const isMatchingPass = (input) => {
-  const user = users.find((user) => user.email === emailInput.value.trim());
-  return user.password === passInput.value.trim();
+  const user = users.find((user) => user.email === inputEmail.value.trim());
+  return user.password === inputPass.value.trim();
 };
 
 const isValidAccount = () => {
   let valid = false;
   // SI EMAIL ESTA VACIO, MUESTRO ERROR
-  if (isEmpty(emailInput)) {
-    showError("Ni pusiste un email hdp");
+  if (isEmpty(inputEmail)) {
+    showError("No ingresaste el email");
     return;
   }
 
   //SI PASSWORD ESTA VACIO
-  if (isEmpty(passInput)) {
-    showError("Pone la constraseña puee");
+  if (isEmpty(inputPass)) {
+    showError("No ingresaste la contraseña");
     return;
   }
   //CONTROLAMOS QUE EXISTA EL EMAIL
-  if (!isExistingEmail(emailInput)) {
-    showError(`Usuario no registrado`);
+  if (!isExistingEmail(inputEmail)) {
+    showError(`¡ups! Parece que no estás registrado`);
     return;
   }
 
   //SI COINCIDE EMAIL Y PASS
   if (!isMatchingPass()) {
-    showError("La cuenta y la contraseña no coinciden mi bro");
+    showError("El email y/o la contraseña no coinciden");
     return;
   }
 
@@ -68,7 +68,7 @@ const login = (e) => {
   //CONTROLAMOS QUE LA CUENTA SEA VALIDA
   if (isValidAccount()) {
     //SI ES VALIDO, TRAIGO EL USER
-    const user = users.find((user) => user.email === emailInput.value.trim());
+    const user = users.find((user) => user.email === inputEmail.value.trim());
 
     //GUARDAMOS EL USER EN SESION STORAGE
     saveToSesionStorage(user);
@@ -78,8 +78,16 @@ const login = (e) => {
   }
 };
 
+function selectFocus() {
+  this.classList.toggle("select-Focus");
+}
+
 const init = () => {
   loginForm.addEventListener("submit", login);
+  inputEmail.addEventListener("focus", selectFocus);
+  inputEmail.addEventListener("blur", selectFocus);
+  inputPass.addEventListener("focus", selectFocus);
+  inputPass.addEventListener("blur", selectFocus);
 };
 
 init();

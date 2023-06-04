@@ -21,10 +21,17 @@ const buyButton = document.querySelector(".button__buy");
 const deleteButton = document.querySelector(".button__delete");
 const cartBubble = document.querySelector(".cart-bubble");
 const ofertFormEmail = document.querySelector(".form-ofert");
-const inputEmail = document.querySelector(".input-email"); 
-const headerIndicator = document.querySelector(".header-super-up")
+const inputEmail = document.querySelector(".input-email");
+const headerIndicator = document.querySelector(".header-super-up");
+const userName = document.querySelector(".username__span--container");
+const userAccount = document.querySelector("#user-account");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+
+const showUserName = () => {
+  userName.innerHTML = `${activeUser.usuario}!`;
+};
 
 const saveCart = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -500,6 +507,7 @@ const init = () => {
   disableButton(buyButton);
   disableButton(deleteButton);
   renderCartBubble();
+  showUserName();
   ofertFormEmail.addEventListener("submit", submitHandler);
   inputEmail.addEventListener("input", () => checkEmail(inputEmail));
   inputEmail.addEventListener("focus", selectFocus);

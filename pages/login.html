@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="../assets/estilos/form.css" />
+    <link rel="stylesheet" href="../assets/estilos/style.css" />
+    <link rel="stylesheet" href="../assets/estilos/animaciones.css" />
+    <link rel="stylesheet" href="../assets/estilos/mediaquerys.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,41 +19,27 @@
     <link rel="stylesheet" href="../assets/estilos/form.css" />
   </head>
   <body>
-    <header>
-      <div class="header-up">
-        <div class="header-rigth">
-          <h2><a href="../index.html">Tienda Tobier</a></h2>
-
-          <input type="text" class="input-search" placeholder="" />
-        </div>
-
-        <div class="header-left">
-          <div class="header-links">
-            <a href="#">Ayuda</a>
-            <i class="fa-regular fa-comments"></i>
-          </div>
-          <div class="header-links">
-            <a href="#">Mi carrito</a>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+    <header class="header__register">
+      <div class="header-super-up--register">
+        <figure>
+          <a
+            href="https://www.growbarato.net/blog/la-mejor-marihuana-del-mundo/"
+            target="_blank"
+            ><i class="fa-solid fa-cannabis"></i
+          ></a>
+        </figure>
+        <div class="header-super-up-left">
+          <a href="../index.html">Inicio</a> |
+          <a href="../pages/register.html">Registrarse</a>
         </div>
       </div>
-
-      <div class="header-down">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">¿Quienes somos?</a></li>
-            <li><a href="#">Ubicacion</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div class="overlay"></div>
     </header>
-
-    <section id="hero">
-      <div class="form-container">
-        <h1>Nos encanta verte de nuevo!</h1>
+    <section id="hero__login">
+      <div class="form-container--login">
+        <div class="title__container--login">
+          <h1>Iniciar sesion</h1>
+        </div>
         <form class="form-login" id="form-login">
           <div class="form__field">
             <input
@@ -70,12 +60,27 @@
           <button class="btn-send" id="btn-login">Iniciar sesion</button>
           <small id="form__error"></small>
         </form>
-        <p>
-          ¿no tienes cuenta?
-          <span><a href="./register.html">Crear cuenta!</a></span>
+        <p class="already__account--login">
+          ¿No tienes cuenta?
+          <span><a href="./register.html">¡Crear una cuenta!</a></span>
         </p>
       </div>
     </section>
+    <footer>
+      <ul>
+        <li><a href="#">Politica de privacidad</a></li>
+        <li><a href="#">Trabajá con nosotros</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+      <p>
+        Copyright © 2023 - Capibara-Store - Creado y mantenido por
+        <span
+          ><a href="https://github.com/Tobiiduarte12" target="_blank"
+            >Tobias Duarte⚜️</a
+          ></span
+        >
+      </p>
+    </footer>
     <script src="../assets/login.js"></script>
   </body>
 </html>

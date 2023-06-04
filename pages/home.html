@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tu Tienda de Ropa</title>
+    <link rel="stylesheet" href="../assets/estilos/style.css" />
+    <link rel="stylesheet" href="../assets/estilos/mediaquerys.css" />
+    <link rel="stylesheet" href="../assets/estilos/animaciones.css" />
+    <link rel="stylesheet" href="../assets/estilos/form.css" />
     <!-- ***** Font-Asome ***** -->
     <link
       rel="stylesheet"
@@ -16,10 +20,33 @@
   </head>
   <body>
     <header>
-      <div class="header-up">
-        <div class="header-rigth">
+      <div class="header-super-up">
+        <figure>
+          <a
+            href="https://www.growbarato.net/blog/la-mejor-marihuana-del-mundo/"
+            target="_blank"
+            ><i class="fa-solid fa-cannabis icon__cannabis"></i
+          ></a>
+        </figure>
+        <div class="header-super-up-left">
+          <p>
+            <i class="fa-solid fa-bong icon__bong"></i> !Hola
+            <span class="username__span--container"></span>
+            <i class="fa-solid fa-bong icon__bong"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="header-mid header-effect-border" id="header-mid">
+        <div class="header-left">
+          <div class="menu-container" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
           <div class="form-control">
-            <h2>TIENDA TOBIER</h2>
+            <h2 class="title__icon">
+              <a href="../pages/home.html">TIENDA TOBIER</a>
+            </h2>
             <input
               class="input input-alt"
               placeholder="Buscar..."
@@ -28,173 +55,305 @@
             />
             <span class="input-border input-border-alt"></span>
           </div>
-        </div>
 
-        <div class="header-left">
-          <div class="header-links">
-            <a href="#">Ayuda</a>
-            <i class="fa-regular fa-comments"></i>
+          <div class="nav__inside__container">
+            <nav class="nav__inside">
+              <ul class="nav__inside--list">
+                <li><a href="#section-products">Productos</a></li>
+                <li><a href="#section-ofert">Contact</a></li>
+                <li><a href="#about-us">Nosotros</a></li>
+              </ul>
+            </nav>
           </div>
-          <div class="header-links">
-            <i class="fa-regular fa-user"></i>
-            <a href="#"><span id="user-account"></span></a>
+        </div>
+        <div class="header-rigth">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping" id="cart-btn"
+            ><div class="cart-bubble">0</div></i
+          >
+        </div>
+      </div>
+      <nav class="nav__menu">
+        <ul class="nav__menu__list">
+          <li class="menu__item">
+            <a href="#" class="nav-menu--link"
+              >Destacados <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="menu__nesting">
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside"
+                  >Los mas vendidos</a
+                >
+                <ul>
+                  <li><a href="#">Calzado</a></li>
+                  <li><a href="#">Ropa</a></li>
+                  <li><a href="#">Accesorios y equipo</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="nav-menu--link"
+              >Hombre <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="menu__nesting">
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Novedades</a>
+                <ul>
+                  <li><a href="#">Nuevos Lanzamientos</a></li>
+                  <li><a href="#">Imprescindible de Futbol</a></li>
+                  <li><a href="#">NBA</a></li>
+                  <li><a href="#">Zapatillas desde $ 24.999</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Calzado</a>
+                <ul>
+                  <li><a href="#">Moda</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Botines</a></li>
+                  <li><a href="#">Jordan</a></li>
+                  <li><a href="#">Basquet</a></li>
+                  <li><a href="#">Todo el calzado</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Ropa</a>
+                <ul>
+                  <li><a href="#">Remeras</a></li>
+                  <li><a href="#">Pantalones</a></li>
+                  <li><a href="#">Short y bermudas</a></li>
+                  <li><a href="#">Buzos y camperas</a></li>
+                  <li><a href="#">Toda la ropa</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside"
+                  >Comprar por deporte</a
+                >
+                <ul>
+                  <li><a href="#">Moda</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Botines</a></li>
+                  <li><a href="#">Jordan</a></li>
+                  <li><a href="#">Basquet</a></li>
+                  <li><a href="#">Todo el calzado</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="nav-menu--link"
+              >Mujer <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="menu__nesting">
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Novedades</a>
+                <ul>
+                  <li><a href="#">Nuevos Lanzamientos</a></li>
+                  <li><a href="#">Imprescindible de Futbol</a></li>
+                  <li><a href="#">NBA</a></li>
+                  <li><a href="#">Zapatillas desde $ 24.999</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Calzado</a>
+                <ul>
+                  <li><a href="#">Moda</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Botines</a></li>
+                  <li><a href="#">Jordan</a></li>
+                  <li><a href="#">Basquet</a></li>
+                  <li><a href="#">Todo el calzado</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Ropa</a>
+                <ul>
+                  <li><a href="#">Remeras</a></li>
+                  <li><a href="#">Pantalones</a></li>
+                  <li><a href="#">Short y bermudas</a></li>
+                  <li><a href="#">Buzos y camperas</a></li>
+                  <li><a href="#">Toda la ropa</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside"
+                  >Comprar por deporte</a
+                >
+                <ul>
+                  <li><a href="#">Moda</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Botines</a></li>
+                  <li><a href="#">Jordan</a></li>
+                  <li><a href="#">Basquet</a></li>
+                  <li><a href="#">Todo el calzado</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="nav-menu--link"
+              >Niño/a <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="menu__nesting">
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Novedades</a>
+                <ul>
+                  <li><a href="#">Todo para el colegio</a></li>
+                  <li><a href="#">Nuevos lanzamientos</a></li>
+                  <li><a href="#">Zapatillas desde $ 14.999</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Calzado</a>
+                <ul>
+                  <li><a href="#">Moda</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Botines</a></li>
+                  <li><a href="#">Jordan</a></li>
+                  <li><a href="#">Basquet</a></li>
+                  <li><a href="#">Todo el calzado</a></li>
+                </ul>
+              </li>
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Ropa</a>
+                <ul>
+                  <li><a href="#">Remeras</a></li>
+                  <li><a href="#">Pantalones</a></li>
+                  <li><a href="#">Short y bermudas</a></li>
+                  <li><a href="#">Buzos y camperas</a></li>
+                  <li><a href="#">Toda la ropa</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="nav-menu--link"
+              >Accesorios <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="menu__nesting">
+              <li class="menu__inside">
+                <a href="#" class="menu__link menu__link--inside">Novedades</a>
+                <ul>
+                  <li><a href="#">Medias</a></li>
+                  <li><a href="#">Gorras</a></li>
+                  <li><a href="#">Bolsos y mochilas</a></li>
+                  <li><a href="#">Pelotas</a></li>
+                  <li><a href="#">Canilleras y guantes</a></li>
+                  <li><a href="#">Todos los accesorios</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav__menu--mobile">
+        <div class="nav__up">
+          <h2><a href="./index.html">TIENDA TOBIER</a></h2>
+          <i class="fa-solid fa-xmark close__menu"></i>
+        </div>
+      </nav>
+
+      <div class="cart">
+        <h2>Tuca Rito <i class="fa-solid fa-joint icon-tuca"></i></h2>
+        <div class="cart__items--container"></div>
+
+        <div class="cart-total">
+          <div class="cart__total--bid">
+            <p>Total:</p>
+            <span class="total__price"></span>
           </div>
-          <div class="header-links">
-            <a href="#">Mi carrito</a>
-            <i class="fa-solid fa-cart-shopping"></i>
+          <div class="buttons--container">
+            <button class="btn-primary--two button__delete">
+              <i class="fa-regular fa-trash-can icono trash"></i>
+              <span>Vaciar carrito</span>
+            </button>
+            <button class="btn-primary button__buy">
+              <i class="fa-solid fa-money-bill-1-wave icono"></i>
+              <span>Comprar</span>
+            </button>
           </div>
         </div>
       </div>
-
-      <div class="header-down">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">¿Quienes somos?</a></li>
-            <li><a href="#">Ubicacion</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div class="overlay"></div>
     </header>
 
     <section id="hero">
-      <h2 class="user-title">
-        Hola <span id="user-name">messi</span> nos encanta tenerte aca!
-      </h2>
-      <div class="hero-cards-info-container">
-        <div class="cards-info">
-          <i class="fa-solid fa-arrow-rotate-left"></i>
-          <div class="card-info-title">
-            <span>Realizamos cambios</span>
-            <a href="#">Escribinos al Whatsapp</a>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <p>3 cuotas sin interés</p>
+            <a href="#">Ver opciones de pago</a>
+          </div>
+          <div class="slide">
+            <p>Entregas a todo el país.</p>
+            <a href="#">Ver información de envíos y entregas</a>
+          </div>
+          <div class="slide">
+            <p>Por fin <span>TiendaTobier.com.ar</span></p>
           </div>
         </div>
-        <div class="cards-info">
-          <i class="fa-solid fa-truck-ramp-box"></i>
-          <div class="card-info-title">
-            <span>Realizamos envios a todo el pais</span>
-            <a href="#">De lunes a viernes</a>
+        <div class="slider-arrows">
+          <div class="slider-arrow slider-arrow-left">
+            <i class="fa-solid fa-circle-arrow-left"></i>
           </div>
-        </div>
-        <div class="cards-info">
-          <i class="fa-solid fa-house-user"></i>
-          <div class="card-info-title">
-            <span>Quedate en la comodidad de tu casa.</span>
-            <a href="#">Nostros te llevamos el pedido</a>
+          <div class="slider-arrow slider-arrow-right">
+            <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
         </div>
       </div>
 
-      <!-- Agrega aquí tus productos destacados -->
-      <h2 class="section-title">Destacados</h2>
-      <div class="products-container">
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+      <div class="hero-cards-infoUs-container">
+        <div class="cards-infoUs">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+          <div class="card-infoUs-title">
+            <span>Realizamos cambios</span>
+            <a href="https://wa.me/3777201788" target="_blank"
+              >Escribinos al Whatsapp<i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+        <div class="cards-infoUs">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+          <div class="card-infoUs-title">
+            <span>Realizamos envios a todo el pais</span>
+            <p>De lunes a viernes</p>
           </div>
         </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="card-product">
-          <figure class="card-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-product-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Agregar al carrito</button>
+        <div class="cards-infoUs">
+          <i class="fa-solid fa-house-user"></i>
+          <div class="card-infoUs-title">
+            <span>Quedate en la comodidad de tu casa.</span>
+            <p>Nostros te llevamos el pedido</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="section-novedades">
-      <h2 class="section-title">Novedades</h2>
-      <div class="card-novedades-container">
-        <div class="card-novedades">
-          <figure class="card-novedades-img-container">
-            <img src="../assets/img/remera1.png" alt="producto" />
-          </figure>
-          <div class="card-novedades-info">
-            <h3>Remera</h3>
-            <p>Remera de algodon</p>
-            <span>$ 1000</span>
-            <button class="btn-add-product">Ver mas</button>
-          </div>
-        </div>
+    <section id="section-products">
+      <h2 class="section-title">Destacados</h2>
+      <div class="filters-container">
+        <button class="filter">
+          <span class="category active">Todas</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="buzos">Buzos</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="remeras">Remeras</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="pantalones">Pantalones</span>
+        </button>
+        <button class="filter">
+          <span class="category" data-category="conjunto">Conjuntos</span>
+        </button>
       </div>
+      <div class="products-container"></div>
+      <button class="btn-load">Ver más</button>
     </section>
 
     <section id="section-ofert">
@@ -216,22 +375,69 @@
             <small></small>
           </div>
 
-          <button class="btn-add-product">Enviar</button>
+          <button class="send__Email">Enviar</button>
         </form>
       </div>
     </section>
 
+    <section id="about-us">
+      <div class="about__container">
+        <h2>Acerca de Nosotros</h2>
+        <p>
+          Somos una marca de ropa dedicada a ofrecer diseños únicos y de alta
+          calidad. Nos apasiona la moda y nos esforzamos por brindar prendas que
+          reflejen estilo y comodidad.
+        </p>
+        <p>
+          Nuestro equipo está formado por apasionados diseñadores y
+          programadores que se unieron para crear un proyecto único en el mundo
+          de la moda. Nos esforzamos por ofrecer productos que destaquen en
+          originalidad y se adapten a las últimas tendencias.
+        </p>
+        <p>
+          En nuestra tienda en línea, encontrarás una amplia variedad de remeras
+          cuidadosamente diseñadas y fabricadas con materiales de alta calidad.
+          Trabajamos en estrecha colaboración con proveedores confiables para
+          asegurarnos de que cada prenda cumpla con nuestros estándares de
+          excelencia.
+        </p>
+        <p>
+          Valoramos a nuestros clientes y nos esforzamos por brindarles una
+          experiencia de compra excepcional. Nuestro objetivo es que te sientas
+          satisfecho con tu compra y que disfrutes de nuestras prendas tanto
+          como nosotros al crearlas.
+        </p>
+        <p>
+          ¡Gracias por elegirnos y ser parte de nuestra historia! Estamos
+          emocionados de acompañarte en tu viaje de estilo y moda.
+        </p>
+      </div>
+    </section>
+
+    <div class="btn__up--container">
+      <button class="btn__up">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
+
     <footer>
+      <ul>
+        <li><a href="#">Politica de privacidad</a></li>
+        <li><a href="#">Trabajá con nosotros</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
       <p>
-        &copy; 2023
+        Copyright © 2023 - Capibara-Store - Creado y mantenido por
         <span
           ><a href="https://github.com/Tobiiduarte12" target="_blank"
-            >Tienda TOBIER.</a
+            >Tobias Duarte⚜️</a
           ></span
         >
-        Todos los derechos reservados.
       </p>
     </footer>
-    <script src="../assets/home.js"></script>
+    <div class="add-modal"></div>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="../assets/data.js"></script>
+    <script src="../assets/newHome.js"></script>
   </body>
 </html>

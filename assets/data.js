@@ -4,7 +4,7 @@ const productsData = [
     name: "Remera Happy Tabacky",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remeraHongos--front.png",
+    image: "../assets/img/remeraHongos--front.png",
     category: "remeras",
   },
   {
@@ -12,7 +12,7 @@ const productsData = [
     name: "Remera Happy Tabacky",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remeraHongos--back.png",
+    image: "../assets/img/remeraHongos--back.png",
     category: "remeras",
   },
   {
@@ -20,7 +20,7 @@ const productsData = [
     name: "Remera Crazy Band",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remeraCrazy--front.jpg",
+    image: "../assets/img/remeraCrazy--front.jpg",
     category: "remeras",
   },
   {
@@ -28,7 +28,7 @@ const productsData = [
     name: "Remera Crazy Band",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remeraCrazy--back.jpg",
+    image: "../assets/img/remeraCrazy--back.jpg",
     category: "remeras",
   },
   {
@@ -36,7 +36,7 @@ const productsData = [
     name: "Remera CocoAk47",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remera--mari1.png",
+    image: "../assets/img/remera--mari1.png",
     category: "remeras",
   },
   {
@@ -44,7 +44,7 @@ const productsData = [
     name: "Remera CocoAk47",
     description: "Talles: XL X L S ",
     price: "4800",
-    image: "./assets/img/remera--mari3.png",
+    image: "../assets/img/remera--mari3.png",
     category: "remeras",
   },
   {
@@ -52,7 +52,7 @@ const productsData = [
     name: "Buzo CocoAk47",
     description: "Talles: XL X L S ",
     price: "8999",
-    image: "./assets/img/buzo-cocoak42.png",
+    image: "../assets/img/buzo-cocoak42.png",
     category: "buzos",
   },
   {
@@ -60,7 +60,7 @@ const productsData = [
     name: "Buzo CrazyBand",
     description: "Talles: XL X L S ",
     price: "8999",
-    image: "./assets/img/buzo-logo.png",
+    image: "../assets/img/buzo-logo.png",
     category: "buzos",
   },
   {
@@ -68,7 +68,7 @@ const productsData = [
     name: "Buzo PatoKnive",
     description: "Talles: XL X L S ",
     price: "8999",
-    image: "./assets/img/buzo-pato.png",
+    image: "../assets/img/buzo-pato.png",
     category: "buzos",
   },
   {
@@ -76,7 +76,7 @@ const productsData = [
     name: "Pantalon CocoAk47",
     description: "TALLES: XL X L S ",
     price: "7799",
-    image: "./assets/img/pantalon-cocoak47.png",
+    image: "../assets/img/pantalon-cocoak47.png",
     category: "pantalones",
   },
   {
@@ -84,7 +84,7 @@ const productsData = [
     name: "Pantalon PatoKnive",
     description: "TALLES: XL X L S ",
     price: "7799",
-    image: "./assets/img/pantalon-pato.png",
+    image: "../assets/img/pantalon-pato.png",
     category: "pantalones",
   },
   {
@@ -92,7 +92,7 @@ const productsData = [
     name: "Conjunto PatoKnive",
     description: "TALLES: XL X L S ",
     price: "14500",
-    image: "./assets/img/conjunto--pato.png",
+    image: "../assets/img/conjunto--pato.png",
     category: "conjunto",
   },
   {
@@ -100,7 +100,7 @@ const productsData = [
     name: "Conjunto CocoCrazyBand",
     description: "TALLES: XL X L S ",
     price: "14500",
-    image: "./assets/img/conjunto--cocoylogo.png",
+    image: "../assets/img/conjunto--cocoylogo.png",
     category: "conjunto",
   },
 ];
