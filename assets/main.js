@@ -21,8 +21,8 @@ const buyButton = document.querySelector(".button__buy");
 const deleteButton = document.querySelector(".button__delete");
 const cartBubble = document.querySelector(".cart-bubble");
 const ofertFormEmail = document.querySelector(".form-ofert");
-const inputEmail = document.querySelector(".input-email"); 
-const headerIndicator = document.querySelector(".header-super-up")
+const inputEmail = document.querySelector(".input-email");
+const headerIndicator = document.querySelector(".header-super-up");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

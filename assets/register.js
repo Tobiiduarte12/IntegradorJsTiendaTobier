@@ -195,6 +195,8 @@ const checkPhone = (input) => {
   return valid;
 };
 
+const jsConfetti = new JSConfetti();
+
 //  VALIDACION GENERAL Y ALMACENAMIENTO DE DATOS
 
 const submitHandler = (e) => {
@@ -232,9 +234,12 @@ const submitHandler = (e) => {
 
     //4: DAR FEEDBACK AL USUARIO
     alert("Registrado con exito!");
+    jsConfetti.addConfetti();
 
     //6: REDIRECCIONAR AL USUARIO AL LOGIN
-    window.location.href = "login.html";
+    setInterval(() => {
+      window.location.href = "login.html";
+    }, 1400);
   }
 };
 
