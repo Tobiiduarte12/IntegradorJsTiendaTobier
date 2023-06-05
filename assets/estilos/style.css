@@ -1047,6 +1047,8 @@ footer ul {
   display: flex;
   text-align: center;
   gap: 20px;
+  position: relative;
+  bottom: 0;
 }
 
 footer ul a {
