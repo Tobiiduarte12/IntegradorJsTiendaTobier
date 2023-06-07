@@ -43,7 +43,9 @@ const isValidAccount = () => {
   }
   //CONTROLAMOS QUE EXISTA EL EMAIL
   if (!isExistingEmail(inputEmail)) {
-    showError(`¡ups! Parece que no estás registrado 😞`);
+    showError(
+      `¡ups! Tus credenciales no coinciden con un usuario registrado en nuestro sistema 😞`
+    );
     return;
   }
 
