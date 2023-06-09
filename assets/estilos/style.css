@@ -178,15 +178,21 @@ header {
   display: flex;
 }
 
-.nav__inside__container {
-  width: 70%;
+.nav__menu__inside {
+  position: absolute;
+  left: 600px;
 }
 
 .nav__inside--list {
   display: flex;
   width: 100%;
-  gap: 5px;
   justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav__inside--list--mobile {
+  display: none;
 }
 
 .menu__item {
@@ -647,7 +653,7 @@ header {
   display: flex;
   width: 95%;
   height: 200px;
-  gap: 2px;
+  gap: 8px;
 }
 
 .cards-infoUs {
@@ -657,7 +663,7 @@ header {
   justify-content: center;
   width: 100%;
   background-color: #b8c9db;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   padding: 0px 20px;
 }
 
